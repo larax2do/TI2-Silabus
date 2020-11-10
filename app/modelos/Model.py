@@ -28,3 +28,20 @@ class Model:
             data.append(content)
             content={}
             return data
+
+    def nSilabo(self,sil_ide,sil_sem,sil_inst_eva,sil_per_aca,sil_fun,sil_sum,sil_req_apro):
+
+        params={
+            'sil_ide':sil_ide,
+            'sil_sem':sil_sem,
+            'sil_inst_eva':sil_inst_eva,
+            'sil_per_aca':sil_per_aca,
+            'sil_fun':sil_fun,
+            'sil_sum':sil_sum,
+            'sil_req_apro':sil_req_apro
+        }
+        query="""INSERT INTO Silabo (sil_ide,sil_sem,sil_inst_eva,sil_per_aca,sil_fun,sil_sum,sil_req_apro) VALUES (%(sil_ide)s, %(sil_sem)s, %(sil_inst_eva)s, %(sil_per_aca)s, %(sil_fun)s, %(sil_sum)s, %(sil_req_apro)s);"""
+        self.cursor.execute(query,params)
+        self.con.commit()
+
+        return params
