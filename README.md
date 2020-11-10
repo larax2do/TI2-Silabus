@@ -11,6 +11,6 @@
 # Participantes
 
 - Thales
-- Jhoel
+- Jhoel Salomon Tapara Quispe
 - Rodrigo
 - Cari
