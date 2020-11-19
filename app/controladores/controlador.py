@@ -10,20 +10,30 @@ model=Model(app)
 def index():
     return 'hola'
 
-@app.route('/tasks/<id>',methods=['POST'])
-def tasks(id):
-    return jsonify(model.tasks(id))
-
-@app.route('/nSilabo',methods=['POST'])
-def nSilabo():
-    return jsonify(model.nSilabo(request.json['sil_ide'],request.json['sil_sem'],request.json['sil_inst_eva'],request.json['sil_per_aca'],request.json['sil_fun'],request.json['sil_sum'],request.json['sil_req_apro']))
-    
-    '''cursor.execute('SELECT * from Silabo')
-    rv = cursor.fetchall()
-    data=[]
-    content={}
-    for result in rv:
-        content={'sil_ide':result[0], 'sil_sem':result[1], 'sil_inst_eva':result[2],'sil_per_aca':result[3],'sil_fun':result[4],'sil_sum':result[5],'sil_req_apro':result[6]}
-        data.append(content)
-        content={}
-    return jsonify(data)'''
+@app.route('/task_autor/<id>',methods=['POST'])
+def task_autor(id):
+    return jsonify(model.task_autor(id))
+@app.route('/task_Bibliografia/<id>',methods=['POST'])
+def task_Bibliografia(id):
+    return jsonify(model.task_Bibliografia(id))
+@app.route('/task_silabo/<id>',methods=['POST'])
+def task_silabo(id):
+    return jsonify(model.task_silabo(id))
+@app.route('/task_capitulo/<id>',methods=['POST'])
+def task_capitulo(id):
+    return jsonify(model.task_capitulo(id))
+@app.route('/task_estrategia_evaluacion/<id>',methods=['POST'])
+def task_estrategia_evaluacion(id):
+    return jsonify(model.task_estrategia_evaluacion(id))
+@app.route('/task_estrategia_aprendizaje/<id>',methods=['POST'])
+def task_estrategia_aprendizaje(id):
+    return jsonify(model.task_estrategia_aprendizaje(id))
+@app.route('/task_prerequisitos/<id>',methods=['POST'])
+def task_prerequisitos(id):
+    return jsonify(model.task_prerequisitos(id))    
+@app.route('/task_cronograma/<id>',methods=['POST'])
+def task_cronograma(id):
+    return jsonify(model.task_cronograma(id))
+@app.route('/task_tema/<id>',methods=['POST'])
+def task_tema(id):
+    return jsonify(model.task_tema(id))
