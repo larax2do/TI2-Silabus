@@ -1,9 +1,9 @@
-#create database Silabo2;
+create database Silabo2;
 use Silabo2;
 
 DROP TABLE IF EXISTS Curso;		
 CREATE TABLE Curso (
-cur_ide INT NOT NULL,
+cur_ide INT NOT NULL auto_increment,
 cur_cod INT,
 cur_nom varchar(50),
 cur_sem INT,
@@ -19,11 +19,10 @@ PRIMARY KEY (cur_ide)
 
 DROP TABLE IF EXISTS Silabo;
 CREATE TABLE Silabo (
-  sil_ide INT NOT NULL,
+  sil_ide INT NOT NULL auto_increment,
   sil_per varchar(10),
   sil_inf_espe varchar(4000),
   sil_comp_asig varchar(5000),
-
   sil_eva_apre varchar(3000),
   sil_req_apro varchar(2000),
   cur_ide INT,
@@ -32,7 +31,7 @@ CREATE TABLE Silabo (
 
 DROP TABLE IF EXISTS Programacion_actividades;
 CREATE TABLE Programacion_actividades(
-  prog_ide INT NOT NULL,
+  prog_ide INT NOT NULL auto_increment,
   prog_act_met varchar(1000),
   prog_act_med varchar(1000),
   prog_act_form varchar(1000),
@@ -45,7 +44,7 @@ CREATE TABLE Programacion_actividades(
 
 DROP TABLE IF EXISTS Cronograma_evaluacion;
 CREATE TABLE Cronograma_evaluacion (
-  cro_ide INT NOT NULL,
+  cro_ide INT NOT NULL auto_increment,
   cro_eva INT NOT NULL,
   cro_fecha DATE,
   cro_exa_teo INT,
@@ -59,7 +58,7 @@ CREATE TABLE Cronograma_evaluacion (
 
 DROP TABLE IF EXISTS Docente;
 CREATE TABLE Docente (
-doc_ide INT NOT NULL,
+doc_ide INT NOT NULL auto_increment,
 doc_dni INT NOT NULL,
 doc_nom varchar (100),
 doc_ape_mat varchar(100),
@@ -71,7 +70,7 @@ PRIMARY KEY (doc_ide)
 
 DROP TABLE IF EXISTS Sil_docente;
 CREATE TABLE Sil_docente (
-sil_docente_ide INT NOT NULL,
+sil_docente_ide INT NOT NULL auto_increment,
 doc_ide INT,
 sil_ide INT,
 PRIMARY KEY (sil_docente_ide)
@@ -80,7 +79,7 @@ PRIMARY KEY (sil_docente_ide)
 
 DROP TABLE IF EXISTS Departamento_academico;
 CREATE TABLE Departamento_academico (
-dep_aca_ide INT NOT NULL,
+dep_aca_ide INT NOT NULL auto_increment,
 dep_aca_nom varchar (100),
 PRIMARY KEY (dep_aca_ide)
 );
@@ -88,7 +87,7 @@ PRIMARY KEY (dep_aca_ide)
 
 DROP TABLE IF EXISTS Unidad_academica;
 CREATE TABLE Unidad_academica (
-uni_aca_ide INT NOT NULL,
+uni_aca_ide INT NOT NULL auto_increment,
 uni_nom varchar(100),
 sil_ide INT,
 PRIMARY KEY (uni_aca_ide)
@@ -101,7 +100,7 @@ PRIMARY KEY (uni_aca_ide)
 
 DROP TABLE IF EXISTS Capitulo;		
 CREATE TABLE Capitulo (
-  cap_ide INT NOT NULL,
+  cap_ide INT NOT NULL auto_increment,
   cap_nom varchar(100),
   uni_aca_ide INT,
   PRIMARY KEY (cap_ide)
@@ -110,7 +109,7 @@ CREATE TABLE Capitulo (
 
 DROP TABLE IF EXISTS Tema;
 CREATE TABLE Tema (
-  tem_ide INT NOT NULL,
+  tem_ide INT NOT NULL auto_increment,
   tem_nom varchar(100),
   tem_sem varchar(10),
   tem_porcen varchar(100),
@@ -122,7 +121,7 @@ CREATE TABLE Tema (
 
 DROP TABLE IF EXISTS Bibliografia;
 CREATE TABLE Bibliografia (
-  bib_ide INT NOT NULL,
+  bib_ide INT NOT NULL auto_increment,
   bib_nom  varchar(50),
   bib_edi varchar(50),
   bib_editorial varchar(50),
@@ -133,7 +132,7 @@ CREATE TABLE Bibliografia (
 
 DROP TABLE IF EXISTS Bibliografia_silabo;
 CREATE TABLE Bibliografia_silabo (
-  bib_sil_ide INT NOT NULL,
+  bib_sil_ide INT NOT NULL auto_increment,
   bib_sil_prio BOOLEAN,
   bib_ide INT,
   sil_ide INT,
@@ -144,7 +143,7 @@ CREATE TABLE Bibliografia_silabo (
 
 DROP TABLE IF EXISTS Autor;
 CREATE TABLE Autor (
-  aut_ide INT NOT NULL,
+  aut_ide INT NOT NULL auto_increment,
   aut_nom INT,
   aut_ape INT,
   PRIMARY KEY (aut_ide)
@@ -156,7 +155,7 @@ CREATE TABLE Autor (
 
 DROP TABLE IF EXISTS Autor_bibliografia;
 CREATE TABLE Autor_bibliografia (
-  aut_bib_ide INT NOT NULL,
+  aut_bib_ide INT NOT NULL auto_increment,
   bib_ide INT,
   aut_ide INT,
   PRIMARY KEY (aut_bib_ide)
@@ -165,7 +164,7 @@ CREATE TABLE Autor_bibliografia (
    
 DROP TABLE IF EXISTS Prerequisitos;
 CREATE TABLE Prerequisitos(
-  pre_ide INT NOT NULL,
+  pre_ide INT NOT NULL auto_increment,
   curs_ide INT,
   pre_cur_ide INT,
   PRIMARY KEY (pre_ide)

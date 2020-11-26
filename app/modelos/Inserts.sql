@@ -1,8 +1,14 @@
+use Silabo2;
 
-use Silabo;
+-- 1 curso
+INSERT INTO Curso(cur_cod, cur_nom, cur_sem, cur_dur, cur_hor_teo, cur_hor_prac, cur_hor_lab, cur_credi, cur_fund)
+VALUES (1704255,"TOPICOS EN INGENIERIA DE SOFTWARE (E)",8,17,2,2,0,3,"El curso discute los últimos avances (fundamentos, métodos, técnicas y herramientas) en investigación
+relacionada a Ingeniería de Software; principalmente, la automatización de las actividades de desarrollo de
+software o el soporte automatizado a los usuarios que participan en tales actividades.");
+
 -- TRABAJO INTERDISCIPLINAR II
-INSERT INTO Silabo (sil_ide,sil_sem,sil_inst_eva,sil_per_aca,sil_fun,sil_sum,sil_req_apro) 
-VALUES (1,"VI","","2020-B","Proyectos Interdisciplinarios II es un curso en el que los estudiantes trabajan en equipos en un proyecto de
+INSERT INTO Silabo (sil_per,sil_inf_espe,sil_comp_asig,sil_eva_apre,sil_req_apro,cur_ide) 
+VALUES ("2020-B","Proyectos Interdisciplinarios II es un curso en el que los estudiantes trabajan en equipos en un proyecto de
 investigación y desarrollo o emprendimiento, con el fin de plantear una solución a un problema relevante.
 El desarrollo del proyecto se centra en el uso de herramientas de ingeniería, tecnología y la ciencia de la
 computación para proponer soluciones a problemas técnicos, tecnológicos, científicos y/o sociales. La integración del conocimiento y aspectos multidisciplinarios e interdisciplinarios es un elemento esencial
@@ -13,26 +19,109 @@ está expuesto a problemas de complejidad moderada, con bajo nivel de incertidum
 la solución, y cuenta con el apoyo y supervisión cercana del asesor del proyecto. El curso enfatiza el
 desarrollo y reforzamiento delas habilidades de comunicación efectiva y colaboración, para propiciar la
 formación de equipos de alto rendimiento. Se aprende a gestionar proyectos, aplicando buenas prácticas y
-estándares internacionales.","","ID");
+estándares internacionales.","Competencias generales
+f) Comunicarse efectivamente con audiencias diversas. (Usar)
+n) Aplicar conocimientos de humanidades en su labor profesional. (Usar)
+Competencias específicas de Computación (IEEE)
+C17. Capacidad para expresarse en los medios de comunicación orales y escritos como se espera deun
+graduado. Outcome f
+C19. Capacidad para identificar eficazmente los objetivos y las prioridades de su trabajo / área /proyecto
+con indicación de la acción, el tiempo y los recursos necesarios. Outcome n
+Objetivos
+- Identificar problemas
+- Diseñar un componente o un proceso para satisfacer las necesidades deseadas dentro de restricciones
+realistas.","- Evaluación continua del avance del proyecto final.
+- Análisis de casos de estudio.","Para aprobar el curso se deberá haber presentado todos los trabajos.
+Los trabajos o tareas deberán ser originales. La copia o plagio a cualquier tipo de nivel, o cualquier tipo de
+actitud deshonesta, será penalizada con cero en todo el componente donde se haya detectado la copia.",1);
 -- TOPICOS DE INGENIERIA DE SOFTWARE
-INSERT INTO Silabo (sil_ide,sil_sem,sil_inst_eva,sil_per_aca,sil_fun,sil_sum,sil_req_apro) 
-VALUES (2,"VIII","","2020-B","El curso discute los últimos avances (fundamentos, métodos, técnicas y herramientas) en investigación
+INSERT INTO Silabo (sil_per,sil_inf_espe,sil_comp_asig,sil_eva_apre,sil_req_apro,cur_ide) 
+VALUES ("2020-B","El curso discute los últimos avances (fundamentos, métodos, técnicas y herramientas) en investigación
 relacionada a Ingeniería de Software; principalmente, la automatización de las actividades de desarrollo de
-software o el soporte automatizado a los usuarios que participan en tales actividades.","","ID");
+software o el soporte automatizado a los usuarios que participan en tales actividades.","a) Ser capaz de aplicar los principios y tecnologías de ingeniería de software para asegurar que las
+implementaciones de software son robustos, fiables y apropiados para su público objetivo.
+b) Entendimiento del concepto del ciclo de vida, incluyendo la importancia de sus fases (planificación,
+desarrollo, implementación y evolución).
+c) Entender las implicaciones de ciclo de vida para el desarrollo de todos los aspectos de los sistemas
+informáticos (incluyendo software, hardware, y la interfaz de la computadora humana).
+d) Comprender la relación entre la calidad y la gestión del ciclo de vida.
+e) Capacidad para participar de forma activa y coordinada en un equipo.
+f) Capacidad para identificar eficazmente los objetivos y las prioridades de su trabajo / área / proyecto con
+indicación de la acción, el tiempo y los recursos necesarios.
+g) Evaluar los sistemas en términos de atributos de calidad en general y las posibles ventajas y
+desventajas que se presentan en el problema dado.","1.- Evaluación Continua. Se evaluará durante todo el semestre a los estudiantes considerando:
+1.1. Su actitud solidaria o egoísta, su interés por aprender, el que sea autodidacta y aplicación de los
+contenidos, participación en clase, el trabajo de investigación formativa, participación en prácticas de
+laboratorio de acuerdo a la pertinencia en la asignatura.
+1.2. Presentación de informes escritos como producto de investigaciones bibliográficas
+2.- Evaluación Periódica.
+2.1 Primer Examen
+2.2 Segundo Examen
+2.3 Tercer Examen
+3.- Examen Subsanación o Recuperación (Sustitutorio):","Se tomará en cuenta para la aprobación del estudiante, las normas establecidas en el Reglamento General
+de Evaluación del proceso enseñanza aprendizaje de la UNSA:
+a) El alumno tendrá derecho a observar o en su defecto a ratificar las notas consignadas en sus
+evaluaciones, después de ser entregadas las mismas por parte del profesor, salvo el vencimiento de
+plazos para culminación del semestre académico, luego del mismo, no se admitirán reclamaciones,
+alumno que no se haga presente en el día establecido, perderá su derecho a reclamo.
+b) Para aprobar el curso el alumno debe obtener una nota igual o superior a 10.5, en el promedio final.
+c) El redondeo, sólo se efectuará en el cálculo del promedio final, quedado expresó, que las notas
+parciales, no se redondearán individualmente.
+d) El alumno que no tenga alguna de sus evaluaciones y no haya solicitado evaluación de rezagados en el
+plazo oportuno, se le considerará como abandono.
+e) Los casos particulares por los cuales el alumno no pudo cumplir con su evaluación en el tiempo
+establecido, podrá tramitar ante la dirección de escuela, su respectiva justificación, con la cual, el profesor
+tendrá la obligación de tomarle una nueva evaluación, la misma que sustituirá, la nota en cuestión.
+f) El estudiante quedará en situación de ?abandono? si el porcentaje de asistencia es menor al ochenta
+(80%) por ciento en las actividades que requieran evaluación continua (Prácticas, talleres, seminarios,
+etc.).
+g) A continuación, se muestra la fórmula de Promedio Final (PF):
+PF= EC1*0.09 + EX1*0.2 + EC2*0.09 + EX2*0.2 + EC3*0.15 * TF3*0.27",1);
 -- SISTEMAS OPERATIVOS
-INSERT INTO Silabo (sil_ide,sil_sem,sil_inst_eva,sil_per_aca,sil_fun,sil_sum,sil_req_apro) 
-VALUES (3,"VI","","2020-B","Este curso tiene por objetivo que el alumno pueda analizar y comprender el funcionamiento de cómo se
+INSERT INTO Silabo (sil_per,sil_inf_espe,sil_comp_asig,sil_eva_apre,sil_req_apro,cur_ide) 
+VALUES ("2020-B","Este curso tiene por objetivo que el alumno pueda analizar y comprender el funcionamiento de cómo se
 administran los recursos software y hardware del computador, para que el alumno aplique su pensamiento
-crítico, creativo e innovador al resolver problemas de su entorno de acuerdo al análisis respectivo.","","ID");
+crítico, creativo e innovador al resolver problemas de su entorno de acuerdo al análisis respectivo.","Competencias Generales
+b) Analizar problemas e identificar y definir los requerimientos computacionales apropiados para su
+solución. (Evaluar)
+Competencias específicas de Computación (IEEE)
+C1. La comprensión intelectual y la capacidad de aplicar las bases matemáticas y la teoría de la
+informática (Computer Science).) Outcome b
+C6. Capacidad para diseñar y poner en práctica las unidades estructurales mayores que utilizan algoritmos
+y estructuras de datos y las interfaces a través del cual estas unidades se comunican.) Outcome b
+CS8. Aplicar los principios de la interacción persona-ordenador para la evaluación y la construcción de una
+amplia gama de materiales, incluyendo interfaces de usuario, páginas web, sistemas multimedia y
+sistemas móviles.) Outcome b","Serán propuestos ejercicios y prácticas de laboratorio semanales de acuerdo con el contenido enseñado
+en clase.
+Los ejercicios serán resueltos por los alumnos en horario de clase y también de forma asíncrona (offline).","Para el promedio final, la fracción 0.5 o mayor favorece al estudiante.
+La nota promocional mínima aprobatoria es Once (11).
+El alumno que no haya rendido uno o más de los exámenes estará en condición de abandono. El sistema
+de evaluación elegido se basa en el Reglamento de Evaluación de la Facultad: PROMEDIO =
+0.15*EC1+0.15*EP1 + 0.15*EC2+0.15*EP2 + 0.2*EC3+0.2*EP3",1);
 -- SEMINARIO DE TESIS
-INSERT INTO Silabo (sil_ide,sil_sem,sil_inst_eva,sil_per_aca,sil_fun,sil_sum,sil_req_apro) 
-VALUES (4,"X","","2020-B","Esta asignatura permitirá al estudiante constituir una primera versión del borrador de tesis, de la mano del asesoramiento y seguimiento continuo del docente que tiene el rol de asesor tanto en la elaboración del
+INSERT INTO Silabo (sil_per,sil_inf_espe,sil_comp_asig,sil_eva_apre,sil_req_apro,cur_ide) 
+VALUES ("2020-B","Esta asignatura permitirá al estudiante constituir una primera versión del borrador de tesis, de la mano del asesoramiento y seguimiento continuo del docente que tiene el rol de asesor tanto en la elaboración del
 documento de la tesis así como en la generación y aplicación de técnicas y otros elementos necesarios
 para darle fundamento a su propuesta. Del mismo modo permitirá efectuar un ensayo para una tentativa
-defensa de sus tesis en coordinación con los docentes que efectúen la cátedra compartida.","","ID");
+defensa de sus tesis en coordinación con los docentes que efectúen la cátedra compartida.","a) Aplicar conocimientos de computación y de matemáticas.
+b) Analizar problemas e identificar y definir los requerimientos computacionales
+c) Diseñar, implementar y evaluar un sistema, proceso, componente o programa
+computacional.
+d) Entender las implicancias profesionales, éticas, legales, de seguridad y sociales
+e) Comunicarse efectivamente.
+f) Aprender de forma continua.
+g) Utilizar técnicas y herramientas actuales.
+h) Desarrollar principios de investigación con nivel internacional","1: Evaluación Continua: Retroalimentación de los trabajos revisados de forma continua, mediante
+reuniones de asesoría y correcciones por los docentes
+2: Evaluación Teórica:
+2.1 Presentación del Documento del consolidación del plan de tesis y estado del arte con resultados al
+30%
+2.2 Documento de desarrollo de la propuesta con resultados al 60%
+2.3 Documento Final ( Primer Borrador de Tesis) con resultados al 100%","Presentar los entregables en las fechas de evaluación teórica y asistir a las asesorías con los docentes,
+teniendo como Nota Mínima para aprobar : 11",1);
 -- SEGURIDAD EN LA COMPUTACION
-INSERT INTO Silabo (sil_ide,sil_sem,sil_inst_eva,sil_per_aca,sil_fun,sil_sum,sil_req_apro) 
-VALUES (5,"VIII","","2020-B","Dentro de las Ciencias de la Computación, para asegurar la eficiencia y robustez de los algoritmos i/o
+INSERT INTO Silabo (sil_per,sil_inf_espe,sil_comp_asig,sil_eva_apre,sil_req_apro,cur_ide) 
+VALUES ("2020-B","Dentro de las Ciencias de la Computación, para asegurar la eficiencia y robustez de los algoritmos i/o
 aplicaciones generadas para el manejo y procesamiento de la información, es necesario e imprescindible
 el manejo de tecnologías, técnicas, normativas que garanticen la seguridad de la misma, tanto a nivel de
 hardware como software. Por esta razón, la asignatura está organizada en tres partes; en la primera, se
@@ -42,48 +131,250 @@ detrás de la criptografía y el diseño de los sistemas de comunicación segura
 en la formulación y las técnicas de diferentes primitivas de cifrado y en el uso seguro de estas, para
 alcanzar los objetivos de confidencialidad, integridad y autenticidad en escenarios teóricos y prácticos. En
 la tercera parte basada sobre TCP/IP para las comunicaciones, se presentarán las normas y protocolos
-aplicados para la seguridad en la web y las implementaciones de seguridad a nivel de sistema operativo.","","ID");
+aplicados para la seguridad en la web y las implementaciones de seguridad a nivel de sistema operativo.","a) Discutir a un nivel intermedio/avanzado los fundamentos de la Seguridad Informática.
+b) Brindar conocimiento especializado en los diferentes aspectos que presenta el código malicioso.
+c) Conocer los conceptos asociados a la criptografía y seguridad en redes de computadoras.
+d) Discutir y analizar junto con el alumno los aspectos de la seguridad en Internet.","PRIMERA EVALUACION CONTINUA (EC1): reúne la consolidación de la evaluación de trabajos de
+investigación, resolución de casos de estudio y prácticas de laboratorio desarrolladas de manera individual
+i/o grupal
+SEGUNDA EVALUACION CONTINUA (EC2): reúne la consolidación de la evaluación de trabajos de
+investigación, resolución de casos de estudio y prácticas de laboratorio desarrolladas de manera individual
+i/o grupal
+TERCERA EVALUACION CONTINUA (EC3): reúne la consolidación de la evaluación de trabajos de
+investigación, resolución de casos de estudio y prácticas de laboratorio desarrolladas de manera individual
+i/o grupal
+PRIMER EXAMEN (EX1): examen parcial de los contenidos indicados en el sílabo
+SEGUNDO EXAMEN (EX2): examen parcial de los contenidos indicados en el sílabo
+TERCER EXAMEN (EX3): examen parcial de los contenidos indicados en el sílabo","a) El alumno tendrá derecho a observar o en su defecto a ratificar las notas consignadas en sus
+evaluaciones, después de ser entregadas las mismas por parte del profesor, salvo el vencimiento de
+plazos para culminación del semestre académico, luego del mismo, no se admitirán reclamos, alumno que
+no se haga presente en el día establecido, perderá su derecho a reclamo.
+b) Para aprobar el curso el alumno debe obtener una nota igual o superior a 10.5, en el promedio final
+c) El redondeo, solo se efectuará en el cálculo del promedio final, quedado expreso, que las notas
+parciales, no se redondearan individualmente.
+d) El alumno que no tenga alguna de sus evaluaciones y no haya solicitado evaluación de rezagados en el
+plazo oportuno, se le considerará como abandono.
+e) El estudiante quedara en situación de ABANDONO si el porcentaje de asistencia es menor al ochenta
+(80%) por ciento en las actividades que requieran evaluación continua (Practicas, talleres, seminarios, etc).",1);
 -- ROBOTICA
-INSERT INTO Silabo (sil_ide,sil_sem,sil_inst_eva,sil_per_aca,sil_fun,sil_sum,sil_req_apro) 
-VALUES (6,"X","","2020-B","El alumno debe conocer y comprender los conceptos y principios fundamentales de control, planificación
+INSERT INTO Silabo (sil_per,sil_inf_espe,sil_comp_asig,sil_eva_apre,sil_req_apro,cur_ide) 
+VALUES ("2020-B","El alumno debe conocer y comprender los conceptos y principios fundamentales de control, planificación
 de caminos y definición de estratégias en robótica móvil, así como conocer y comprender conceptos de
-percepción robótica de forma que entienda el potencial de los sistemas robóticos actuales.","","ID");
+percepción robótica de forma que entienda el potencial de los sistemas robóticos actuales.","Competencias general
+- Aplicar conocimiento de computación y de matemáticas apropiadas par la disciplina
+- Analizar problemas e identificar y definir los requerimientos computacionales apropiados para su solución
+- Entender correctamente las implicancias profesionales, éticas, legales, de seguridad y sociales de
+profesión
+- Incorporarse a u proceso de aprendizaje profesional continuo
+- Utilizar técnicas y herramientas actuales necesarias pra la práctica de la computación
+Competencias específicas de computación (IEEE)
+- Capacidad para tener una perspectiva critica y creativa para identificar y resolver problemas utilizando el
+pensamiento computacional
+- Entendimiento de lo que las tecnologias actuales pueden y no pueden lograr
+- Capacidad para emprender, completar y presentar un proyecto final
+- Modelar y diseñar sistemas de computadora de una manera que se demuestre comprensión de balance
+entre las opciones de diseño",
+"Evaluación continua, se realizará de forma sistemática a través de las entregas de tareas, practicas,
+informe de guias de laboratorio y trabajos a lo largo del curso, utilizando el aula virtual o en su defecto por
+otro medio no presencial, esta tendra la siguiente ponderación:
+- Primera Evaluación continua, que tendrá un peso de 20%
+- Segunda Evaluación continua, que tendrá un peso de 20%
+- Tercera Evaluación continua, que tendrá un peso de 20%
+Evaluación periódica, consiste de una evaluación teórico-práctico de conocimiento, utilizando el aula virtual
+o en su defecto por otro medio no presencial y donde el alumno dará sus respuestas por escrito. Estará
+constituido por tres examenes
+- Primer examen parcial: que tendrá un peso de 15%
+- Segundo examen parcial: que tendrá un peso de 15%
+- Tercer examen parcial: que tendrá un peso de 10%
+Examen de subsanación o recuperación (sustitutorio): consiste en la evaluación teórico - práctico de
+conocimiento de los temas abarcados hasta el segundo examen del curso y donde el alumno dará sus
+respuestas por escrito, utilizando el aula virtual o en su defecto por otro medio no presencial. La nota
+obtenida en el examen sustitutorio, podrá reemplazar la nota más baja que el alumno haya obtenido en sus
+dos primeros exámenes como dicta el reglamento de la UNSA","a) El alumno tendrá drecho a observar o en su defecto ratificar las notas consignadas en sus evaluaciones,
+después de ser entregadas las mismas por parte del profesor, salvo el vencimiento de los plazaos para
+culminación del semestre académico, luego del mismo, no se admitirán reclamaciones, alumno que no se
+haga presente en el día establecido perderá su derecho a reclamo
+b) Para aprobar el curso el alumno debe obtener una nota igual o superior a 10.5 en el promedio final
+c) El alumno que no tenga aluna de sus evaluaciones y no haya solicitado evaluación justificada en el
+plazo oportuno, se le considerará la nota minima
+d) El estudiante quedará en situación de abandono si el porcentaja de asistencia es cero (0%) en todas las
+actividades que requieran evaluación contínua (Prácticas, talleres, seminarios, laboratorios, etc.) y
+examenes parciales",1);
 -- REALIDAD NACIONAL
-INSERT INTO Silabo (sil_ide,sil_sem,sil_inst_eva,sil_per_aca,sil_fun,sil_sum,sil_req_apro) 
-VALUES (7,"II","","2020-B","El ejercicio profesional de los estudiantes de la Universidad nacional de San Agustín en su diversidad de
+INSERT INTO Silabo (sil_per,sil_inf_espe,sil_comp_asig,sil_eva_apre,sil_req_apro,cur_ide) 
+VALUES ("2020-B","El ejercicio profesional de los estudiantes de la Universidad nacional de San Agustín en su diversidad de
 disciplinas, requieren de una formación integral que promueva el desarrollo de las diferentes dimensiones
 de la persona humana. Es en ese sentido que el curso de Realidad Nacional se convierte en una asignatura de vital importancia
 para fomentar el desarrollo integral de las capacidades cognitivas y sensibles, haciendo una comprensión
-general de la sociedad peruana, así como su lugar desde la profesión en ella.","","ID");
+general de la sociedad peruana, así como su lugar desde la profesión en ella.","General
+Explica los problemas sociales del Perú desde el punto de vista económico, social, político y cultural con
+el fin de comprometerse a contribuir a su solución, defendiendo en sus posiciones, los intereses patrios.
+Específicas
+1. Identifica las características económicas, productivas, sociales, políticas y culturales con el fin de
+considerarlas de manera responsable.
+2. Relaciona información de diversos problemas de la sociedad peruana, económico productivos,
+sociales, políticas y culturales con el fin de contribuir a su explicación de manera crítica.
+3. Describe las características de la de la sociedad peruana en los aspectos económico-productivos,
+sociales, políticos y culturales con la finalidad de contribuir a su explicación de manera crítica.","Concepción de la Evaluación
+Las evaluaciones se realizan por competencias, donde el proceso de retroalimentación, determinación de
+idoneidad y certificación de los aprendizajes de los estudiantes están de acuerdo con las competencias
+de referencia.
+Las evaluaciones tienen dos características:
+a) Evaluación Continua o formativa: El docente evalúa constantemente de forma virtual como los
+estudiantes usan y obtienen la información, evalúa los procesos utilizados para obtener los resultados.
+Esta evaluación tiene un porcentaje del 60%
+
+b) Evaluación periódica o examen Se evaluara en base a un balotario de preguntas según la unidad,
+donde concentrara las interrogantes de los temas analizados, de los cuales se tomara preguntas.
+Dichos exámenes serán tres conforme al programa de nuestra universidad. La evaluación se
+organizara con los estudiantes, a las 72 horas antes. Se entregara los resultados a cada estudiante, el
+mismo que dará su conformidad, si en caso no es así, se cotejara la disconformidad en el momento,
+no habiendo reclamo posterior. Las fechas de evaluación serán programadas por la Universidad. Esta
+evaluación tiene un porcentaje del 40%
+c) Examen Subsanación o Recuperación (Sustitutorio): Es una evaluación que el estudiante puede
+realizar para recuperar una nota según lo contempla el reglamento.","a) El estudiante tendrá derecho a observar o en su defecto a ratificar las notas consignadas en sus
+evaluaciones, después de ser entregadas las mismas por parte del profesor, salvo el vencimiento de
+plazos para culminación del semestre académico, luego del mismo, no se admitirán reclamaciones,
+alumno que no se haga presente en el día establecido, perderá su derecho a reclamo.
+b) Para aprobar el curso el estudiante debe obtener una nota igual o superior a 10.5, en el promedio final.
+c) El redondeo, solo se efectuará en el cálculo del promedio final, quedado expreso, que las notas
+parciales, no se redondearan individualmente.
+d) El alumno que no tenga alguna de sus evaluaciones y no haya solicitado evaluación de rezagados en
+el plazo oportuno, se le considerará como abandono.
+e) El estudiante quedara en situación de “abandono” si el porcentaje de asistencia es menor al ochenta
+(80%) por ciento en las actividades que requieran evaluación continua (Practicas, talleres, seminarios,
+etc.).",1);
 -- PROYECTO FINAL DE CARRERA I
-INSERT INTO Silabo (sil_ide,sil_sem,sil_inst_eva,sil_per_aca,sil_fun,sil_sum,sil_req_apro) 
-VALUES (8,"VIII","","2020-B","Este curso tiene por objetivo que el alumno pueda realizar un estudio del estado del arte de un
-determinado tema que el alumno ha elegido como tema para su tesis.","","ID");
+INSERT INTO Silabo (sil_per,sil_inf_espe,sil_comp_asig,sil_eva_apre,sil_req_apro,cur_ide) 
+VALUES ("2020-B","Este curso tiene por objetivo que el alumno pueda realizar un estudio del estado del arte de un
+determinado tema que el alumno ha elegido como tema para su tesis.","OBJETIVOS:
+- Que el alumno realice una investigación inicial en un tema especifico realizando el estudio del estado del
+arte
+del tema elegido.
+- Que el alumno muestre dominio en el tema de la línea de investigación elegida.
+- Que el alumno elija un docente que domine el de investigación elegida como asesor.
+COMPETENCIAS:
+a) Analizar problemas e identificar y definir los requerimientos computacionales apropiados para su
+solución. (Evaluar)
+b) Diseñar, implementar y evaluar un sistema, proceso, componente o programa computacional para
+alcanzar las necesidades deseadas. (Usar)
+c) Diseñar, implementar y evaluar un sistema, proceso, componente o programa computacional para
+alcanzar las necesidades deseadas. (Familiarizarse)","- Cada semana se colocará una nota sobre las presentaciones de los estudiantes que contribuirá con la
+nota contínua.
+- Al fin de cada unidad se presentará de forma abierta los avances de cada estudiante.","- El estudiante deberá obtener una calificación igual o superior a 10.5 después de aplicar el promedio de
+notas:
+NF = .6*NC1 + .13*EP1 + .6*NC2 + .13*EP2 + .21*NC1 + .41*EP1
+- Además, para que sea válida esta nota el estudiante debe tener un porcentaje de asistencia mayor al
+75%.
+- En caso que el estudiante cometa algún acto deshonroso como la copia total o parcial de algún trabajo de
+investigación, o la colaboración no autorizada de otras personas en el desarrollo de su trabajo u otra
+actitud que el docente juzgue como desleal; el estudiante recibirá la nota de cero en la evaluación parcial
+de la unidad correspondiente y consecuentemente el estudiante será declarado como abandono por el
+sistema.",1);
 -- PROGRAMACION DE VIDEO JUEGOS
-INSERT INTO Silabo (sil_ide,sil_sem,sil_inst_eva,sil_per_aca,sil_fun,sil_sum,sil_req_apro) 
-VALUES (9,"X","","2020-B","La industria de los video juegos ha tenido un crecimiento exponencial en las últimas dos décadas y puede
+INSERT INTO Silabo (sil_per,sil_inf_espe,sil_comp_asig,sil_eva_apre,sil_req_apro,cur_ide) 
+VALUES ("2020-B","La industria de los video juegos ha tenido un crecimiento exponencial en las últimas dos décadas y puede
 ser aplicada a diversas áreas del conocimiento humano. El potencial que ofrece esta área para un egresado es muy amplio y como tal se considera como un área crítica para el desarrollo de la industria del software.
 Este curso permitirá a los alumnos que tengan las capacidades de desarrollar y programar sus propios
 videojuegos. También comprenderán conceptos de IA, Computación gráfica e Interacción Humano Computador
-relacionada al desarrollo de software de videojuegos.","","ID");
+relacionada al desarrollo de software de videojuegos.","Competencias Generales
+a) Aplicar conocimientos de computación y de matematicas apropiadas para la disciplina. (Usar)
+b) Analizar problemas e identificar y definir los requerimientos computacionales apropiados para su
+solución. (Evaluar)
+i) Utilizar técnicas y herramientas actuales necesarias para la práctica de la computación. (Evaluar)
+j) Aplicar la base matemática, principios de algoritmos y la teoría de la Ciencia de la Computación en el
+modelamiento y diseño de sistemas computacionales de tal manera que demuestre comprensión de los
+puntos de equilibrio involucrados en la opción escogida.
+Objetivos del curso
+- Que el alumno conozca las técnicas fundamentales que permiten la creación de video juegos,
+contribuyendo así en la construcción de una mejor sociedad.
+- Que el alumno construya videos juegos de complejidad media incorporando conceptos de Inteligencia
+Artificial.","Evaluación del aprendizaje
+Evaluación Continua: Se realizará de forma sistemática a través de las entregas de tareas y trabajos a lo
+largo del curso.
+Evaluación Periódica: Consiste de la presentación de proyectos.","a) El alumno tendrá derecho a observar o en su defecto a ratificar las notas consignadas en sus
+evaluaciones, después de ser entregadas las mismas por parte del profesor, salvo el vencimiento de
+plazos para culminación del semestre académico, luego del mismo, no se admitirán reclamaciones,
+alumno que no se haga presente en el día establecido, perderá su derecho a reclamo.
+b) Para aprobar el curso el alumno debe obtener una nota igual o superior a 10.5, en el promedio final.
+c) El alumno que no tenga alguna de sus evaluaciones y no haya solicitado evaluación justificada en el
+plazo oportuno, se le considerará como abandono.
+d) El estudiante quedara en situación de ''abandono'' si el porcentaje de asistencia es menor al ochenta
+(80%) por ciento en las actividades que requieran evaluación continua (Practicas, talleres, seminarios,
+etc.).
+e) El redondeo, se efectuará por la información que se brinde al sistema informático.
+f) El sistema de evaluación elegido se basa en el Reglamento de Evaluación de la Facultad:
+PROMEDIO = 0.15*EC1+0.15EP1 + 0.15*EC2+0.15EP2 + 0.20*EC3+0.20*EP3
+EP = examen parcial
+EC = evaluación continua",1);
 -- PROGRAMACCION COMPETITIVA
-INSERT INTO Silabo (sil_ide,sil_sem,sil_inst_eva,sil_per_aca,sil_fun,sil_sum,sil_req_apro) 
-VALUES (10,"VI","","2020-B","La Programación Competitiva combina retos de solucionar problemas con la diversión de competir con
+INSERT INTO Silabo (sil_per,sil_inf_espe,sil_comp_asig,sil_eva_apre,sil_req_apro,cur_ide) 
+VALUES ("2020-B","La Programación Competitiva combina retos de solucionar problemas con la diversión de competir con
 otras personas. Enseña a los participantes a pensar más rápido y desarrollar habilidades para resolver
 problemas, que son de gran demanda en la industria. Este curso enseñará la resolución de problemas
-algoritmos de manera rápida combinando la teoría de algoritmos y estructuras de datos con la práctica a la solución de los problemas.","","ID");
+algoritmos de manera rápida combinando la teoría de algoritmos y estructuras de datos con la práctica a la solución de los problemas.","OBJETIVOS
+- Que el alumno utilice técnicas de estructuras de datos y algoritmos complejos.
+- Que el alumno aplique los conceptos aprendidos para la aplicación sobre un problema real.
+- Que el alumno investigue la posibilidad de crear un nuevo algoritmo y/o técnica nueva para resolver un
+problema real.
+COMPETENCIAS
+(a) Aplicar conocimientos de computación y de matemáticas apropiadas para la disciplina. (Usar)
+(b) Analizar problemas e identificar y definir los requerimientos computacionales apropiados para su
+solución. (Usar)
+(d) Trabajar en equipo. (Aplicar)
+(h) Incorporarse a un proceso de aprendizaje profesional continuo. (Usar)","-Cada semana se realizará por lo menos un miniconcurso con problemas tipo ICPC-ACM y se sacará un
+ranking para otorgar una nota correspondiente.
+- Al final de cada unidad se organizará un miniconcurso conteniendo los problemas de toda la unidad y
+tendrá un peso mayor a los miniconcursos realizados previamente.","El estudiante debe obtener una igual o superior a 10.5 aplicando el ponderado:
+NF=.3*EC1 + .3*EC2 + .4*EC3
+Además, para que la nota sea válida el estudiante debe tener:
+- Una asistencia a los miniconcursos de por lo menos de 75%.
+- Mostrar una actitud responsable y ética. En caso que se descubra algún acto sospechoso de plagio o
+competencia desleal como suplantación o algo similar, el estudiante será reprobrado en la nota contínua
+de esa unidad y consecuentemente será declarado como abandono del curso.",1);
 -- MATEMATICA APLICADA A LA COMPUTACION
-INSERT INTO Silabo (sil_ide,sil_sem,sil_inst_eva,sil_per_aca,sil_fun,sil_sum,sil_req_apro) 
-VALUES (11,"VI","","2020-B","Gracias a la tecnología matemática y a la cada vez más accesible capacidad de procesamiento y
+INSERT INTO Silabo (sil_per,sil_inf_espe,sil_comp_asig,sil_eva_apre,sil_req_apro,cur_ide) 
+VALUES ("2020-B","Gracias a la tecnología matemática y a la cada vez más accesible capacidad de procesamiento y
 almacenamiento computacional se han desarrollado campos como robótica, computación gráfica, visión
 computacional, big data, inteligencia artificial, etc. En gran medida gracias al álgebra lineal, rama de la
 matemática que por sus naturaleza lineal es muy aprovechada para el modelamiento matemático e implementación computacional en diversos campos.
 Las ecuaciones diferenciales son objetos matemáticos muy útiles para diversos campos de la ciencia y la
 industria, para optimizar procesos, mejorar diseños, etc. mediante la realización de simulaciones
-computacionales a partir de la ecuación diferencial que modela el problema en estudio.","","ID");
+computacionales a partir de la ecuación diferencial que modela el problema en estudio.","a) Aplica conocimientos de computación y herramientas matemáticas para diversos problemas de Ciencia
+de la Computación.
+b) Utiliza técnicas y herramientas actuales necesarias para la práctica de la computación.
+c) Aplica tecnologías matemáticas, principios de algoritmos numéricos y la teoría de la Ciencia de la
+Computación en el modelamiento y diseño de sistemas computacionales de tal manera que demuestre
+comprensión.","1. Evaluación Continua.
+Se evaluará las intervenciones orales y los trabajos prácticos. Dichos trabajos reforzarán los contenidos y
+serán la extensión de los ejercicios hechos en las clases prácticos. En este rubro se considerará la
+evaluación de trabajo de investigación formativa.
+1.1 Evaluación continua 1: Del 07 de setiembre del 2020 al 16 de octubre del 2020.
+1.2 Evaluación continua 2: Del 26 de octubre del 2020 al 20 de noviembre del 2020.
+1.3 Evaluación continua 3: Del 30 de noviembre del 2020 al 25 de diciembre del 2020.
+2. Evaluación periódica.
+Consiste en dos evaluaciones parciales y una final, sobre los contenidos de la signatura, de acuerdo al
+cronograma académico.
+2.1 Primer examen parcial: Del 12 de octubre del 2020 al 16 de octubre del 2020
+2.2 Segundo examen parcial: Del 16 de noviembre del 2020 al 20 de noviembre del 2020
+2.3 Tercer examen parcial: Del 28 de diciembre del 2020 al 31 de diciembre del 2020
+3. Examen sustitutorio:
+Consiste en una evidencia de conocimiento, evidencia de producto y evidencia de desempeño.
+Del 14 de diciembre del 2020 al 18 de diciembre del 2020.","a) El alumno tendrá derecho a observar o en su defecto a ratificar las notas consignadas en sus
+evaluaciones, después de ser entregadas las mismas por parte del profesor, salvo el vencimiento de
+plazos para culminación del semestre académico, luego del mismo, no se admitirán reclamaciones,
+alumno que no se haga presente en el día establecido, perderá su derecho a reclamo.
+b) Para aprobar el curso el alumno debe obtener una nota igual o superior a 10.5, en el promedio final.
+c) El alumno que no tenga alguna de sus evaluaciones y no haya solicitado evaluación de rezagados en el
+plazo oportuno, se le considerará como abandono.
+d) Los casos particulares por los cuales el alumno no pudo cumplir con su evaluación en el tiempo
+establecido, podrán tramitar ante la dirección de escuela, su respectiva justificación, con la cual, el profesor
+tomara una nueva evaluación, la misma que sustituirá, la nota en cuestión.
+e) El estudiante quedara en situación de ?abandono? si el porcentaje de asistencia es menor al 80% por
+ciento en las actividades que requieran evaluación continua (Prácticas, foros, talleres, seminarios, etc.)",1);
 -- INTERACCION HUMANO COMPUTADOR
-INSERT INTO Silabo (sil_ide,sil_sem,sil_inst_eva,sil_per_aca,sil_fun,sil_sum,sil_req_apro) 
-VALUES (12,"VIII","","2020-B","El lenguaje ha sido una de las creaciones más significativas de la humanidad. Desde el lenguaje corporal y
+INSERT INTO Silabo (sil_per,sil_inf_espe,sil_comp_asig,sil_eva_apre,sil_req_apro,cur_ide) 
+VALUES ("2020-B","El lenguaje ha sido una de las creaciones más significativas de la humanidad. Desde el lenguaje corporal y
 gestual, pasando por la comunicación verbal y escrita, hasta códigos simbólicos icónicos y otros, ha
 posibilitado interacciones complejas entre los seres humanos y facilitado considerablemente la
 comunicación de información. Con la invención de dispositivos automáticos y semiautomáticos, entre los
@@ -94,10 +385,35 @@ implementación de adecuadas Interfaces Humano-Computador, que además de cumpli
 técnicos y la lógica transaccional de la aplicación, considere las sutiles implicaciones psicológicas,
 culturales y estéticas de los usuarios, consume buena parte del ciclo de vida de un proyecto software, y
 requiere habilidades especializadas, tanto para la construcción de las mismas, como para la realización de
-pruebas de usabilidad.","","ID");
+pruebas de usabilidad.","c) Diseñar, implementar y evaluar un sistema, proceso, componente o programa computacional para
+alcanzar las necesidades deseadas. (Familiarizarse)
+d) Trabajar efectivamente en equipos para cumplir con un objetivo común. (Usar)
+e) Entender correctamente las implicancias profesionales, éticas, legales, de seguridad y sociales de la
+profesión.(Familiarizarse)
+g) Analizar el impacto local y global de la computación sobre los individuos, organizaciones y sociedad.
+(Familiarizarse)
+o) Mejorar las condiciones de la sociedad poniendo la tecnología al servicio del ser humano.
+(Familiarizarse)","1.- Evaluación Continua. Se evaluará durante todo el semestre a los estudiantes considerando:
+1.1. Su interés por aprender, el que sea autodidacta y aplicación de los contenidos, participación en clase,
+el trabajo de investigación formativa, participación en prácticas de laboratorio, tanto para el primer parcial
+(EC1) y segundo parcial (EC2)
+2.- Evaluación Periódica.
+2.1 Primer Examen (EX1)
+2.2 Segundo Examen (EX2)
+2.3 Proyecto Final (PF) de Interacción Humano Computador","a) El alumno tendrá derecho a observar o en su defecto a ratificar las notas consignadas en sus
+evaluaciones, después de ser entregadas las mismas por parte del profesor, salvo el vencimiento de
+plazos para culminación del semestre académico, luego del mismo, no se admitirán reclamaciones,
+alumno que no se haga presente en el día establecido, perderá su derecho a reclamo.
+b) Para aprobar el curso el alumno debe presentar sus avances de proyectos todas las semanas y obtener
+una nota igual o superior a 10.5, en el promedio final.
+c) El redondeo, solo se efectuará en los cálculos a que dé lugar.
+d) El alumno que no tenga alguna de sus evaluaciones y no haya solicitado evaluación de sustitutorios en
+el plazo oportuno, se le considerará como abandono.
+e) El estudiante quedará en situación de abandono si el porcentaje de asistencia es menor al treinta (30%)
+por ciento y no tenga",1);
 -- INGLES TECNICO PROFESIONAL II
-INSERT INTO Silabo (sil_ide,sil_sem,sil_inst_eva,sil_per_aca,sil_fun,sil_sum,sil_req_apro) 
-VALUES (13,"II","","2020-B","Parte fundamental de la formación integral de un profesional es la habilidad de comunicarse en un idioma
+INSERT INTO Silabo (sil_per,sil_inf_espe,sil_comp_asig,sil_eva_apre,sil_req_apro,cur_ide) 
+VALUES ("2020-B","Parte fundamental de la formación integral de un profesional es la habilidad de comunicarse en un idioma
 extranjero además del propio idioma nativo. No solamente amplía su horizonte cultural sino que permite
 una visión más humana y comprensiva de la vida de las personas.
 La asignatura de Inglés Técnico Profesional II pertenece al área curricular de Estudios Generales, está dirigido a los alumnos de Ciencia de la Computación; se requiere que los alumnos tengan conocimientos
@@ -105,41 +421,176 @@ previos del curso de Inglés Técnico Profesional I.
 El curso fomenta el uso del idioma Inglés dando énfasis al desarrollo de competencias tanto oral como
 escrita enfocadas a las necesidades propias de la carrera.
 Asimismo, se persigue el desarrollo de competencias gramatical y lexical propias del nivel, que le permitan
-lograr una comunicación clara y eficaz según sea el contexto.","","ID");
+lograr una comunicación clara y eficaz según sea el contexto.","Competencias Generales
+Pensamiento Crítico: Produce textos breves con estructuras revisadas, relacionados a su entorno y a su
+especialidad.
+Capacidad de aprendizaje: El alumno desempeña roles receptivos y productivos en un contexto
+comunicativo, desarrollando actitudes positivas en relación al aprendizaje de la Lengua Extranjera (Inglés)
+como elemento de comunicación en un mundo globalizado y valorando el aprendizaje del Inglés como
+medio de comunicación para interactuar con otras personas.
+Capacidad creativa y emprendedora: Comprende y produce textos orales y escritos empleando el nuevo
+vocabulario en diferentes contextos.","Evaluación Periódica: Es la que se realiza al término de una unidad o etapa del proceso de
+enseñanza-aprendizaje con el fin de verificar el logro de las competencias esperadas.
+Se efectuará a través de un examen escrito.
+La evaluación formativa consiste en un abanico de procedimientos de evaluación, formales e informales,
+integrado en el proceso de enseñanza-aprendizaje y están orientados a modificar y mejorar el aprendizaje
+y comprensión de los estudiantes.
+La evaluación sumativa (exámenes escritos) se realiza al término de una etapa de enseñanza-aprendizaje.","El alumno tendrá derecho a observar o en su defecto a ratificar las notas consignadas en sus
+evaluaciones, después de ser entregadas las mismas por parte del profesor, salvo el vencimiento de
+plazos para culminación del semestre académico, luego del mismo, no se admitirán reclamos, alumno que
+no se haga presente en el día establecido, perderá su derecho a reclamo.
+Para aprobar el curso el alumno debe obtener una nota igual o superior a 10.5 en el promedio final.
+El redondeo sólo se efectuará en el cálculo del promedio final, queda expreso, que las notas parciales, no
+se redondearan individualmente.
+El alumno que no tenga alguna de sus evaluaciones y no haya solicitado evaluación de rezagados en el
+plazo oportuno, se le considerará como abandono.
+El estudiante quedará en situación de abandono si el porcentaje de asistencia es menor al ochenta % en
+las actividades que requieran evaluación continua. (Prácticas, talleres, seminarios,etc.)",1);
 -- INGENIERIA DE SOWFTWARE II
-INSERT INTO Silabo (sil_ide,sil_sem,sil_inst_eva,sil_per_aca,sil_fun,sil_sum,sil_req_apro) 
-VALUES (14,"VI","","2020-B","Los tópicos de este curso extienden las ideas del diseño y construcción de software desde la secuencia de
+INSERT INTO Silabo (sil_per,sil_inf_espe,sil_comp_asig,sil_eva_apre,sil_req_apro,cur_ide) 
+VALUES ("2020-B","Los tópicos de este curso extienden las ideas del diseño y construcción de software desde la secuencia de
 introducción a las herramientas y entornos de ingeniería de software, las técnicas de aseguramiento de
 calidad y pruebas, y los desafíos encontrados en proyectos de gran escala o sistemas legados. Es una
-visión más amplia y completa de la Ingeniería de Software apreciada desde un punto de vista de Proyectos.","","ID");
+visión más amplia y completa de la Ingeniería de Software apreciada desde un punto de vista de Proyectos.","a) Ser capaz de aplicar los principios y tecnologías de ingeniería de software para asegurar que las
+implementaciones de software son robustos, fiables y apropiados para su público objetivo.
+b) Entendimiento de lo que las tecnologías actuales pueden y no pueden lograr.
+c) Entendimiento del concepto del ciclo de vida, incluyendo la importancia de sus fases (planificación,
+desarrollo, implementación y evolución).
+d) Entender las implicaciones de ciclo de vida para el desarrollo de todos los aspectos de los sistemas
+informáticos (incluyendo software, hardware, y la interfaz de la computadora humana).
+e) Comprender la relación entre la calidad y la gestión del ciclo de vida.
+f) Capacidad para participar de forma activa y coordinada en un equipo.
+g) Modelar y diseñar sistemas de computadora de una manera que se demuestre comprensión del balance
+entre las opciones de diseño.
+h) Identificar y analizar los criterios y especificaciones apropiadas a los problemas específicos, y planificar
+estrategias para su solución.
+i) Implementar la teoría apropiada, prácticas y herramientas para la especificación, diseño, implementación
+y mantenimiento, así como la evaluación de los sistemas basados en computadoras.
+j) Especificar, diseñar e implementar sistemas basados en computadoras.
+k) Implementar efectivamente las herramientas que se utilizan para la construcción y la documentación de
+software, con especial énfasis en la comprensión de todo el proceso involucrado en el uso de
+computadoras para resolver problemas prácticos. Esto debe incluir herramientas para el control de
+software, incluyendo el control de versiones y gestión de la configuración.","1.- Evaluación Continua. Se evaluará durante todo el semestre a los estudiantes considerando:
+1.1. Su actitud solidaria o egoísta, su interés por aprender, el que sea autodidacta y aplicación de los
+contenidos, participación en clase, el trabajo de investigación formativa, participación en prácticas de
+laboratorio, tanto para el primer parcial (EC1), segundo parcial (EC2) y tercer parcial (EC3)
+2.- Evaluación Periódica.
+2.1 Primer Examen (EP1)
+2.2 Segundo Examen (EP2)
+2.3 Proyecto Final (PF) de Investigación o Implementación","Se tomará en cuenta para la aprobación del estudiante, las normas establecidas en el Reglamento General
+de Evaluación del proceso enseñanza aprendizaje de la UNSA:
+a) El alumno tendrá derecho a observar o en su defecto a ratificar las notas consignadas en sus
+evaluaciones, después de ser entregadas las mismas por parte del profesor, salvo el vencimiento de
+plazos para culminación del semestre académico, luego del mismo, no se admitirán reclamaciones,
+alumno que no se haga presente en el día establecido, perderá su derecho a reclamo.
+b) Para aprobar el curso el alumno debe obtener una nota igual o superior a 10.5, en el promedio final.
+c) El redondeo, sólo se efectuará en el cálculo del promedio final, quedado expresó, que las notas
+parciales, no se redondearán individualmente.
+d) El alumno que no tenga alguna de sus evaluaciones y no haya solicitado evaluación de rezagados en el
+plazo oportuno, se le considerará como abandono.
+e) Los casos particulares por los cuales el alumno no pudo cumplir con su evaluación en el tiempo
+establecido, podrá tramitar ante la dirección de escuela, su respectiva justificación, con la cual, el profesor
+tendrá la obligación de tomarle una nueva evaluación, la misma que sustituirá, la nota en cuestión.
+f) El estudiante quedará en situación de ?abandono? si el porcentaje de asistencia es menor al ochenta
+(80%) por ciento en las actividades que requieran evaluación continua (Prácticas, talleres, seminarios,
+etc.).
+g) A continuación, se muestra la fórmula de Promedio Final (PF):
+PF= EC1*0.15 + EX1*0.15 + EC2*0.15 + EX2*0.15 + EC3*0.20 * PF3*0.20",1);
 -- FUNDAMENTOS DE LA COMPUTACION
-INSERT INTO Silabo (sil_ide,sil_sem,sil_inst_eva,sil_per_aca,sil_fun,sil_sum,sil_req_apro) 
-VALUES (15,"I","","2020-B","Este es el primer curso en la secuencia de los cursos introductorios a la Ciencia de la Computación. En
+INSERT INTO Silabo (sil_per,sil_inf_espe,sil_comp_asig,sil_eva_apre,sil_req_apro,cur_ide) 
+VALUES ("2020-B","Este es el primer curso en la secuencia de los cursos introductorios a la Ciencia de la Computación. En
 este curso se pretende cubrir los conceptos señalados por la Computing Curricula IEEE-CS/ACM 2013,
 bajo el enfoque orientado a objetos. La programación es uno de los pilares de la Ciencia de la
 Computación; cualquier profesional del área, necesitará programar para concretizar sus modelos y
 propuestas. Este curso ofrece una introdución a los participantes en los conceptos fundamentales de este
 área. Los tópicos incluyen variables, estructuras de control, funciones, listas, recursividad, la mecánica de la ejecución, pruebas, depuración y programación orientada a objetos. El curso finaliza con la
-implementación de un video juego donde se apliquen los conceptos aprendidos.","","ID");
-INSERT INTO Silabo (sil_ide,sil_sem,sil_inst_eva,sil_per_aca,sil_fun,sil_sum,sil_req_apro) 
+implementación de un video juego donde se apliquen los conceptos aprendidos.","La comprensión intelectual y la capacidad de aplicar las bases matemáticas y la teoría de la ciencia de la
+computación.
+Capacidad para tener una perspectiva crítica y creativa para identificar y resolver problemas utilizando el
+pensamiento computacional
+Capacidad para implementar algoritmos y estructuras de datos al desarrollar software.
+Una comprensión del hardware de la computadora desde la perspectiva del software, por ejemplo, el uso
+del procesador, memoria, unidades de disco, pantalla, etc.","Cada trabajo realizado en clase teórica será evaluada usando una rúbrica.
+Cada practica calificada será evaluada usando una rúbrica.
+Cada práctica de laboratorio será evaluado usando una rúbrica.
+Todas las notas obtenidas en los puntos anteriores se promediarán para obtener la nota de Evaluación
+Continua (EC).","El alumno tendrá derecho a observar o en su defecto a ratificar las notas consignadas en sus
+evaluaciones, después de ser entregadas las mismas por parte del profesor, salvo el vencimiento de
+plazos para culminación del semestre académico, luego del mismo, no se admitirán reclamaciones,
+alumno que no se haga presente en el día establecido, perderá su derecho a reclamo.
+Para aprobar el curso el alumno debe obtener una nota igual o superior a 11, en el promedio final.
+El redondeo, solo se efectuara en el cálculo del promedio final, quedado expreso, que las notas parciales,
+no se redondearan individualmente.
+El alumno que no tenga alguna de sus evaluaciones y no haya solicitado evaluación de rezagados en el
+plazo oportuno, se le considerará como abandono.
+El Promedio Final (PF) se calcula con la siguiente fórmula: PF = EC1*0.15 + EP1*0.15 + EC2*0.15 +
+EP2*0.15 + EC3*0.20 * EP3*0.20.",1);
 -- FORMACION DE EMPRESAS DE BASE TECNOLOGICA
-VALUES (16,"VIII","","2020-B","Este primer curso, busca dotar al futuro profesional de conocimientos, habilidades y valores, que le
+INSERT INTO Silabo (sil_per,sil_inf_espe,sil_comp_asig,sil_eva_apre,sil_req_apro,cur_ide) 
+VALUES ("2020-B","Este primer curso, busca dotar al futuro profesional de conocimientos, habilidades y valores, que le
 permitan elaborar un plan básico de negocio; a partir del desarrollo de un modelo de negocios, para una
 empresa de base tecnológica. Se busca aprovechar el potencial creativo e innovador y el esfuerzo en la
-creación de nuevas empresas.","","ID");
+creación de nuevas empresas.","OBJETIVO DEL CURSO
+Elaborar un plan básico de negocio para la formación de una empresa de base tecnológica; realizada
+usando modelos de negocio, la concepción y presentación de una propuesta de negocio; aplicando los
+conocimientos del área de Ciencia de la Computación, para la solución de problemas con responsabilidad
+profesional.
+COMPETENCIA GENERAL
+d) Trabajar efectivamente en equipos para cumplir con un objetivo común. (Usar)
+f) Comunicarse efectivamente con audiencias diversas. (Usar)
+i) Utilizar técnicas y herramientas actuales necesarias para la práctica de la computación. (Usar)
+k) Aplicar los principios de desarrollo y diseño en la construcción de sistemas de software de complejidad
+variable. (Evaluar)
+m) Transformar sus conocimientos del área de Ciencia de la Computación en emprendimientos
+tecnológicos. (Evaluar)
+COMPETENCIAS ESPECIFICAS
+C2. Capacidad para tener una perspectiva crítica y creativa para identificar y resolver problemas
+utilizando el pensamiento computacional. Outcome d
+C10. Comprensión del impacto en las personas, las organizaciones y la sociedad de la implementación de
+soluciones tecnológicas e intervenciones. Outcome f
+C17. Capacidad para expresarse en los medios de comunicación orales y escritos como se espera de un
+graduado. Outcome f
+C18. Capacidad para participar de forma activa y coordinada en un equipo. Outcome i
+C19. Capacidad para identificar eficazmente los objetivos y las prioridades de su trabajo / área /proyecto
+con indicación de la acción, el tiempo y los recursos necesarios. Outcome i
+C20. Posibilidad de conectar la teoría y las habilidades aprendidas en la academia a los acontecimientos
+del mundo real que explican su pertinencia y utilidad. Outcome k
+C23. Capacidad para emprender, completar, y presentar un proyecto final. Outcome k
+CS5. Especificar, diseñar e implementar sistemas basados en computadoras. Outcome m","Evaluación Continua
+1.1. Continua 1: Promedio de prácticas e informes, Inicial 20%
+1.2. Continua 2: Promedio de prácticas e informes, Intermedio 20%
+1.3. Continua 3: Promedio de prácticas e informes, Final 27%
+Evaluación Periódica.
+2.1 Primer Examen: 15%
+2.2 Segundo Examen: 35%
+2.3 Segundo Examen: 50%","a) Para aprobar la asignatura el estudiante deberá cumplir con:
+- Presentar todas las actividades prácticas desarrolladas
+- Presentar los informes y sustentar los trabajos programados.
+- Obtener un promedio de exámenes escritos mayor a 08 puntos y una nota igual o superior a 10.5, en el
+promedio final
+b) El alumno tendrá derecho a observar o en su defecto a ratificar las notas consignadas en sus
+evaluaciones, después de ser entregadas las mismas por parte del profesor, salvo el vencimiento de
+plazos para culminación del semestre académico, luego del mismo, no se admitirán reclamaciones.
+c) El redondeo, solo se efectuará en el cálculo del promedio final, quedado expreso, que las notas
+parciales, no se redondearan individualmente.
+d) El alumno que no tenga alguna de sus evaluaciones y no haya solicitado evaluación de rezagados en el
+plazo oportuno, se le considerará como abandono.",1);
+
+#######################################################################
+
 -- FISICA COMPUTACIONAL
-VALUES (17,"VIII","","2020-B","El curso busca preparar al estudiante el manejo y control de la información de conceptos físicos. Así como
+VALUES ("2020-B","El curso busca preparar al estudiante el manejo y control de la información de conceptos físicos. Así como
 también desarrollar los temas fundamentales en forma secuencial y articulada que den una base sólida
 para continuar exitosamente con cursos de especialidad.
 Lo que se logra adquirir con la necesaria profundidad los conceptos de física computacional para que el
 estudiante pueda comprender, interpretar y aplicar estos conocimientos en sus posteriores estudios.","","ID");
 -- ESTRUCTURAS DISCRETAS
-VALUES (18,"I","","2020-B","El curso de Estructuras Discretas I tiene más de un propósito. Este curso enfatiza el razonamiento lógico
+VALUES ("2020-B","El curso de Estructuras Discretas I tiene más de un propósito. Este curso enfatiza el razonamiento lógico
 matemático, el entendimiento de las ventajas de conocer estructuras algebraicas para el estudio de la
 ciencia de la computación y las diferentes formas en que se resuelven los problemas. La selección de
 tópicos busca mantener un cuidadoso equilibrio entre la teoría y las aplicaciones a la computación.","","ID");
 -- ESTRUCTURAS DISCRETAS
-VALUES (19,"I","","2020-B","Las matemáticas discretas surgen como una disciplina donde convergen diversas áreas tradicionales de
+VALUES ("2020-B","Las matemáticas discretas surgen como una disciplina donde convergen diversas áreas tradicionales de
 las matemáticas (aritmética, lógica, conjunto, funciones, grafos, combinatoria entre otros), como
 consecuencia de sus aplicaciones prácticas en la informática y las telecomunicaciones. Las matemáticas
 discretas para los ingenieros de sistemas desempeñan un importante papel en la comprensión de los
@@ -149,7 +600,7 @@ El estudio de las estructuras discretas proporciona una base sólida para el des
 Artificial, Sistemas Expertos y Lógica Informática. Proporciona además el marco ideal para desarrollar
 habilidades en el pensamiento deductivo-inductivo, facilitando así la solución de problemas.","","ID");
 -- ESTRUCTURAS DISCRETAS
-VALUES (20,"IV","","2020-B","La estadística proporciona técnicas de recolección, procesamiento, análisis e interpretación de datos, que
+VALUES ("2020-B","La estadística proporciona técnicas de recolección, procesamiento, análisis e interpretación de datos, que
 también permiten realizar inferencias en base a los resultados del procesamiento de la información
 utilizando la teoría de probabilidad e inferencia estadística. Las herramientas estadísticas desarrolladas en
 esta asignatura permitirán el diseño de modelos aleatorios y la toma de decisiones ante la incertidumbre.","","ID");
@@ -182,7 +633,7 @@ INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_e
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (9,"Tercera Evaluacion Parcial",14-12-2020,20,20,ID);
 
---SEMINARIO DE TESIS
+-- SEMINARIO DE TESIS
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (10,"Primera Evaluacion Parcial",12-10-2020,13,6,ID);
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
@@ -190,7 +641,7 @@ INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_e
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (12,"Tercera Evaluacion Parcial",21-12-2020,41,21,ID);
 
---SEGURIDAD EN COMPUTACION
+-- SEGURIDAD EN COMPUTACION
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (13,"Primera Evaluacion Parcial",12-10-2020,9,20,ID);
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
@@ -198,7 +649,7 @@ INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_e
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (15,"Tercera Evaluacion Parcial",28-12-2020,15,27,ID);
 
---ROBOTICA
+-- ROBOTICA
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (16,"Primera Evaluacion Parcial",14-10-2020,15,15,ID);
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
@@ -206,7 +657,7 @@ INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_e
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (18,"Tercera Evaluacion Parcial",23-12-2020,20,20,ID);
 
---REALIDAD NACIONAL
+-- REALIDAD NACIONAL
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (19,"Primera Evaluacion Parcial",12-10-2020,10,20,ID);
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
@@ -214,7 +665,7 @@ INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_e
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (21,"Tercera Evaluacion Parcial",21-12-2020,10,25,ID);
 
---PROYECTO FINAL DE CARRERA
+-- PROYECTO FINAL DE CARRERA
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (22,"Primera Evaluacion Parcial",15-10-2020,13,6,ID);
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
@@ -222,7 +673,7 @@ INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_e
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (24,"Tercera Evaluacion Parcial",18-12-2020,41,21,ID);
 
---PROGRAMACION DE VIDEO JUEGOS
+-- PROGRAMACION DE VIDEO JUEGOS
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (25,"Primera Evaluacion Parcial",12-10-2020,15,15,ID);
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
@@ -230,7 +681,7 @@ INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_e
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (27,"Tercera Evaluacion Parcial",21-12-2020,20,20,ID);
 
---PROGRAMACION COMPETITIVA
+-- PROGRAMACION COMPETITIVA
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (28,"Primera Evaluacion Parcial",12-10-2020,0,30,ID);
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
@@ -238,7 +689,7 @@ INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_e
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (30,"Tercera Evaluacion Parcial",21-12-2020,0,40,ID);
 
---MATEMATICA APLICADA A LA COMPUTACION
+-- MATEMATICA APLICADA A LA COMPUTACION
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (31,"Primera Evaluacion Parcial",16-10-2020,15,15,ID);
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
@@ -246,7 +697,7 @@ INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_e
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (33,"Tercera Evaluacion Parcial",28-12-2020,20,20,ID);
 
---INTERACCION HUMANO COMPUTADOR
+-- INTERACCION HUMANO COMPUTADOR
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (34,"Primera Evaluacion Parcial",19-10-2020,9,20,ID);
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
@@ -254,7 +705,7 @@ INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_e
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (36,"Tercera Evaluacion Parcial",28-12-2020,15,27,ID);
 
---INTERACCION HUMANO COMPUTADOR
+-- INTERACCION HUMANO COMPUTADOR
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (37,"Primera Evaluacion Parcial",19-10-2020,9,20,ID);
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
@@ -262,7 +713,7 @@ INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_e
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (39,"Tercera Evaluacion Parcial",28-12-2020,15,27,ID);
 
---INGLES TECNICO PROFESIONAL
+-- INGLES TECNICO PROFESIONAL
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (,"Primera Evaluacion Parcial",15-10-2020,9,20,ID);
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
@@ -270,7 +721,7 @@ INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_e
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (,"Tercera Evaluacion Parcial",23-12-2020,15,27,ID);
 
- --INGENIERIA DE SOFTWARE II
+ -- INGENIERIA DE SOFTWARE II
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (,"Primera Evaluacion Parcial",19-10-2020,9,20,ID);
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
@@ -278,7 +729,7 @@ INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_e
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (,"Tercera Evaluacion Parcial",28-12-2020,15,27,ID);
 
- --FUNDAMENTOS DE COMPUTACION
+ -- FUNDAMENTOS DE COMPUTACION
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (,"Primera Evaluacion Parcial",05-10-2020,15,15,ID);
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
@@ -286,7 +737,7 @@ INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_e
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (,"Tercera Evaluacion Parcial",14-12-2020,20,20,ID);
 
- --FORMACION DE EMPRESAS DE ABSE TECNOLOGICA I
+ -- FORMACION DE EMPRESAS DE ABSE TECNOLOGICA I
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (,"Primera Evaluacion Parcial",14-10-2020,9,20,ID);
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
@@ -294,7 +745,7 @@ INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_e
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (,"Tercera Evaluacion Parcial",23-12-2020,15,27,ID);
 
- --FISICA COMPUTACIONAL
+ -- FISICA COMPUTACIONAL
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (,"Primera Evaluacion Parcial",14-10-2020,10,20,ID);
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
@@ -302,7 +753,7 @@ INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_e
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (,"Tercera Evaluacion Parcial",23-12-2020,20,20,ID);
 
- --ESTRUCTURAS DISCRETAS
+ -- ESTRUCTURAS DISCRETAS
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (,"Primera Evaluacion Parcial",08-10-2020,15,15,ID);
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
@@ -310,7 +761,7 @@ INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_e
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (,"Tercera Evaluacion Parcial",31-12-2020,20,20,ID);
 
- --ESTADISTICA Y PROBABILIDADES
+ -- ESTADISTICA Y PROBABILIDADES
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (,"Primera Evaluacion Parcial",08-10-2020,15,15,ID);
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
@@ -318,7 +769,7 @@ INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_e
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (,"Tercera Evaluacion Parcial",31-12-2020,20,20,ID);
 
- --ECOLOGIA Y CONSERVACION AMBIENTAL
+ -- ECOLOGIA Y CONSERVACION AMBIENTAL
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES
  (,"Primera Evaluacion Parcial",08-10-2020,15,15,ID);
 INSERT INTO Cronograma (cro_ide,cro_eva,cro_fecha,cro_exa_teo,cro_eva_cont,est_eva_ide) VALUES

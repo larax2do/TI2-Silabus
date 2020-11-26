@@ -9,7 +9,7 @@ class Model:
         self.mysql=MySQL()
         app.config['MYSQL_DATABASE_USER']='root'
         app.config['MYSQL_DATABASE_PASSWORD']='gonzalito'
-        app.config['MYSQL_DATABASE_DB']='Silabo'
+        app.config['MYSQL_DATABASE_DB']='Silabo2'
         app.config['MYSQL_DATABASE_HOST']='127.0.0.1'
         self.mysql.init_app(app)
 
@@ -44,4 +44,30 @@ class Model:
         self.cursor.execute(query,params)
         self.con.commit()
 
+        return params
+
+    def agregarCronograma(self, cro_eva, cro_fecha, cro_exa_teo,cro_eva_con,sil_ide):
+        params={
+            'cro_eva':cro_eva,
+            'cro_fecha':cro_fecha, 
+            'cro_exa_teo':cro_exa_teo,
+            'cro_eva_con':cro_eva_con,
+            'sil_ide':sil_ide
+        }
+        query="""INSERT INTO Cronograma_evaluacion(cro_eva, cro_fecha, cro_exa_teo,cro_eva_con,sil_ide) VALUES (%(cro_eva)s,%(cro_fecha)s,%(cro_exa_teo)s,%(cro_eva_con)s,%(sil_ide)s);"""
+        self.cursor.execute(query,params)
+        self.con.commit()
+
+        return params
+    def modificarCronograma(self,cro_ide,cro_eva, cro_fecha, cro_exa_teo,cro_eva_con):
+        params={
+            'cro_ide':cro_ide,
+            'cro_eva':cro_eva,
+            'cro_fecha':cro_fecha,
+            'cro_exa_teo':cro_exa_teo,
+            'cro_eva_con':cro_eva_con
+        }
+        query="""UPDATE Cronograma_evaluacion SET cro_ide=%(cro_ide)s,cro_eva=%(cro_eva)s, cro_fecha=%(cro_fecha)s, cro_exa_teo=%(cro_exa_teo)s,cro_eva_con=%(cro_eva_con)s WHERE cro_ide= %(cro_ide)s;"""
+        self.cursor.execute(query,params)
+        self.con.commit()
         return params
