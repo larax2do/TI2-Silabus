@@ -1,6 +1,6 @@
 #from app import app
 #from app.controladores.controlador import tasks
-from flask import jsonify
+from flask import jsonify,request
 from flaskext.mysql import MySQL
 
 class Model:
@@ -139,3 +139,82 @@ class Model:
         return params 
 
 ###### End Thales ############ End Thales ############ End Thales ############ End Thales ############ End Thales ######
+
+###### Rodrigo ############ Rodrigo ############ Rodrigo ############ Rodrigo ############ Rodrigo ######
+    def modificarSilabo(self,sil_ide,sil_per, sil_inf_espe, sil_comp_asig,sil_eva_apre,sil_req_apro):
+        params={
+            'sil_ide':sil_ide,
+            'sil_per':sil_per,
+            'sil_inf_espe':sil_inf_espe,
+            'sil_comp_asig':sil_comp_asig,
+            'sil_eva_apre':sil_eva_apre,
+            'sil_req_apro':sil_req_apro
+        }
+        query="""UPDATE silabo SET sil_ide=%(sil_ide)s,sil_per=%(sil_per)s, sil_inf_espe=%(sil_inf_espe)s, sil_comp_asig=%(sil_comp_asig)s,sil_eva_apre=%(sil_eva_apre)s,sil_req_apro=%(sil_req_apro)s WHERE sil_ide= %(sil_ide)s;"""
+        self.cursor.execute(query,params)
+        self.con.commit()
+        return params
+
+    def modificarUnidad(self,uni_aca_ide,uni_nom):
+        params={
+            'uni_aca_ide':uni_aca_ide,
+            'uni_nom':uni_nom
+        }
+        query="""UPDATE unidad_academica SET uni_aca_ide=%(uni_aca_ide)s,uni_nom=%(uni_nom)s WHERE uni_aca_ide= %(uni_aca_ide)s;"""
+        self.cursor.execute(query,params)
+        self.con.commit()
+        return params
+
+    def modificarCapitulo(self,cap_ide,cap_nom):
+        params={
+            'cap_ide':cap_ide,
+            'cap_nom':cap_nom
+        }
+        query="""UPDATE capitulo SET cap_ide=%(cap_ide)s,cap_nom=%(cap_nom)s WHERE cap_ide= %(cap_ide)s;"""
+        self.cursor.execute(query,params)
+        self.con.commit()
+        return params
+
+    def modificarTema(self,tem_ide,tem_nom,tem_sem,tem_porcen):
+        params={
+            'tem_ide':tem_ide,
+            'tem_nom':tem_nom,
+            'tem_sem':tem_sem,
+            'tem_porcen':tem_porcen
+        }
+        query="""UPDATE tema SET tem_ide=%(tem_ide)s,tem_nom=%(tem_nom)s,tem_sem=%(tem_sem)s,tem_porcen=%(tem_porcen)s WHERE tem_ide= %(tem_ide)s;"""
+        self.cursor.execute(query,params)
+        self.con.commit()
+        return params
+
+    def agregarSilabo(self):
+        print(request.json)
+        query = f'INSERT INTO silabo (sil_per , sil_inf_espe , sil_comp_asig , sil_eva_apre , sil_req_apro ) VALUES ({request.json["periodo"]},"{request.json["informe"]}","{request.json["asignado"]}","{request.json["evaluacion"]}","{request.json["requisitos"]}")'
+        print (query)
+        self.cursor.execute(query)
+        self.con.commit()
+        return "Insert Succesful"
+
+    def agregarUnidad(self):
+        print(request.json)
+        query = f'INSERT INTO unidad_academica (uni_aca_ide , uni_nom ) VALUES ({request.json["id"]},"{request.json["nombre"]}")'
+        print (query)
+        self.cursor.execute(query)
+        self.con.commit()
+        return "Insert Succesful"
+
+    def agregarCapitulo(self):
+        print(request.json)
+        query = f'INSERT INTO capitulo (cap_ide , cap_nom ) VALUES ({request.json["id"]},"{request.json["nombre"]}")'
+        print (query)
+        self.cursor.execute(query)
+        self.con.commit()
+        return "Insert Succesful"
+    def agregarTema(self):
+        print(request.json)
+        query = f'INSERT INTO tema (tem_ide , tem_nom , tem_sem , tem_porcen ) VALUES ({request.json["id"]},"{request.json["nombre"]}","{request.json["semestre"]}","{request.json["porcentaje"]}")'
+        print (query)
+        self.cursor.execute(query)
+        self.con.commit()
+        return "Insert Succesful"
+###### End Rodrigo ############ End Rodrigo ############ End Rodrigo ############  End Rodrigo ############ End Rodrigo ######

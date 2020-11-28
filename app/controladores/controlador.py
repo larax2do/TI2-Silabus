@@ -56,3 +56,40 @@ def quitarContenidoTema():
     return jsonify(model.quitarContenidoTema(request.json['tem_ide']))
 
 ###### End Thales ############ End Thales ############ End Thales ############ End Thales ############ End Thales 
+
+###### Rodrigo ############ Rodrigo ############ Rodrigo ############ Rodrigo ############ Rodrigo ######
+
+# *  [Modificar Sílabo]
+@app.route('/silabo/silabo/modificar',methods=['POST'])
+def modificarSilabo():
+    return jsonify(model.modificarSilabo(request.json['sil_ide'],request.json['sil_per'],request.json['sil_inf_espe'],request.json['sil_comp_asig'],request.json['sil_eva_apre'],request.json['sil_req_apro']))
+
+# *  [Agregar Sílabo]
+@app.route('/silabo/silabo/agregar',methods=['POST'])
+def agregarSilabo():
+    return model.agregarSilabo()
+# *  [Agregar Contenido]
+@app.route('/silabo/unidad_academica/agregar',methods=['POST'])
+def agregarUnidad():
+    return model.agregarUnidad()
+
+@app.route('/silabo/capitulo/agregar',methods=['POST'])
+def agregarCapitulo():
+    return model.agregarCapitulo()
+
+@app.route('/silabo/tema/agregar',methods=['POST'])
+def agregarTema():
+    return model.agregarTema()
+
+# *  [Modificar Contenido]
+@app.route('/silabo/unidad_academica/modificar',methods=['POST'])
+def modificarUnidad():
+    return jsonify(model.modificarUnidad(request.json['uni_aca_ide'],request.json['uni_nom']))
+@app.route('/silabo/capitulo/modificar',methods=['POST'])
+def modificarCapitulo():
+    return jsonify(model.modificarCapitulo(request.json['cap_ide'],request.json['cap_nom']))
+@app.route('/silabo/tema/modificar',methods=['POST'])
+def modificarTema():
+    return jsonify(model.modificarTema(request.json['tem_ide'],request.json['tem_nom'],request.json['tem_sem'],request.json['tem_porcen']))
+
+###### End Rodrigo ############ End Rodrigo ############ End Rodrigo ############  End Rodrigo ############ End Rodrigo ######
