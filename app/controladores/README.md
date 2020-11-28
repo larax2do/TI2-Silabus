@@ -19,8 +19,7 @@ Modulo: SIlabos
 		* 3.1.4 [Asignar Bibliografia](#314-asignar-bibliografia)
 	* 3.2 [Buscar Silabo](#32-buscar-silabo)
 		* 3.2.1 [Buscar Contenido](#321-buscar-contenido)
-		* 3.2.2 [Buscar Cronograma Academico](#322-buscar-cronograma-academico)
-		* 3.2.3 [Buscar Cronograma de Evaluacion](#323-buscar-cronograma-de-evaluacion)
+		* 3.2.2 [Buscar Cronograma de Evaluacion](#323-buscar-cronograma-de-evaluacion)
 	* 3.3 [Modificar Silabo](#33-modificar-silabo)
 		* 3.3.1 [Modificar Contenido](#331-modificar-contenido)
 		* 3.3.2 [Modificar Cronograma de Evaluacion](#332-modificar-cronograma-de-evaluacion)
@@ -37,11 +36,8 @@ Modulo: SIlabos
 
 
 ## 1. Docente
-=================
 
 ### Tabla Docente
-
-
 
 
 
@@ -57,7 +53,7 @@ Modulo: SIlabos
 
 
 ### 1.2 Agregar Docente
-=================
+
 Agrega un nuevo registro a la tabla `Docente`, se envian todos los datos de la tabla excepto el `doc_ide`
 
 ~~~
@@ -84,7 +80,7 @@ POST  "\HOME"
 ~~~
 
 ### 1.3. Buscar de Docente
-=================
+
 Busca un docente de la tabla `Docentes` a partir de su `doc_DNI` y retorna todos los datos.
 
 ~~~
@@ -112,7 +108,8 @@ POST  "\HOME"
 ~~~
 
 ### 1.4 Modificar Docente
-=================
+
+
 Recibe todos los datos del registro y los modifica en la Base de Datos.
 
 ~~~
@@ -139,7 +136,7 @@ POST  "\HOME"
 ~~~
 
 ### 1.5 Quitar Docente
-=================
+
 ***Elimina*** un docente de la base de datos.
 
 ~~~
@@ -162,9 +159,9 @@ POST  "\HOME"
 
 
 ## 2. Curso
-=================
+
 ### 2.1 Buscar Curso
-=================
+
 Busca un curso por su `cur_cod` y retorna sus valores.
 
 ~~~
@@ -189,9 +186,9 @@ POST  "\HOME"
 
 
 ## 3. Silabo
-=================
+
 ### 3.1 Crear Silabo
-=================
+
 Crea un campo en silabo en blanco para reservar su `sil_ide` y para que sea relacionada con las otras tablas.
 
 ~~~
@@ -261,14 +258,17 @@ POST  "\HOME"
 Agrega el contenido a la tabla cronograma del Silabo
 
 ~~~
-POST  "\HOME"
+POST  "/silabo/cronogramaEva/agregar"
 ~~~
 
 ##### Requisito
 
 ~~~
 {
-	
+	"cro_eva": 2,
+	"cro_eva_con": 15,
+	"cro_exa_teo": 50,
+	"cro_fecha": "Fri, 14 Aug 2020 00:00:00 GMT",
 }
 ~~~
 
@@ -302,7 +302,7 @@ POST  "\HOME"
 }
 ~~~
 ### 3.2 Buscar Silabo
-=================
+
 Busca el silabo por `sil_ide` y retorna todos los campos de la tabla silabo y subtablas
 
 ~~~
@@ -324,8 +324,109 @@ POST  "\HOME"
 	
 }
 ~~~
+
+#### 3.2.1 Buscar Contenido
+
+Busca el contenido del silabo por `sil_ide` y retorna todos los campos de la tabla unidad_academica, capitulos y temas
+
+~~~
+POST  "/silabo/contenido/buscar"
+~~~
+
+##### Requisito
+
+~~~
+{
+	"sil_ide":2
+}
+~~~
+
+##### Respuesta
+
+~~~
+[
+  {
+    "cap_ide": 2,
+    "cap_nom": "1 cap 2",
+    "tem_ide": 2,
+    "tem_nom": "tem1",
+    "tem_porcen": "5",
+    "tem_sem": "1",
+    "uni_aca_ide": 2,
+    "uni_nom": "uni dos"
+  },
+  {
+    "cap_ide": 2,
+    "cap_nom": "1 cap 2",
+    "tem_ide": 3,
+    "tem_nom": "tem2",
+    "tem_porcen": "5",
+    "tem_sem": "1",
+    "uni_aca_ide": 2,
+    "uni_nom": "uni dos"
+  },
+  {
+    "cap_ide": 3,
+    "cap_nom": "1 cap 1",
+    "tem_ide": 4,
+    "tem_nom": "tem1",
+    "tem_porcen": "5",
+    "tem_sem": "1",
+    "uni_aca_ide": 3,
+    "uni_nom": "uni tres"
+  },
+  {
+    "cap_ide": 3,
+    "cap_nom": "1 cap 1",
+    "tem_ide": 5,
+    "tem_nom": "tem2",
+    "tem_porcen": "5",
+    "tem_sem": "1",
+    "uni_aca_ide": 3,
+    "uni_nom": "uni tres"
+  }
+]
+~~~
+
+#### 3.2.2 Buscar Cronograma de Evaluacion
+
+Busca el cronograma de evaluacion del silabo por `sil_ide` y retorna todos los campos de la tabla Cronograma_evaluacion
+
+~~~
+POST  "/silabo/cronogramaEva/buscar"
+~~~
+
+##### Requisito
+
+~~~
+{
+	"sil_ide":2
+}
+~~~
+
+##### Respuesta
+
+~~~
+[
+  {
+    "cro_eva": 2,
+    "cro_eva_con": 15,
+    "cro_exa_teo": 50,
+    "cro_fecha": "Fri, 14 Aug 2020 00:00:00 GMT",
+    "cro_ide": 2
+  },
+  {
+    "cro_eva": 2,
+    "cro_eva_con": 15,
+    "cro_exa_teo": 15,
+    "cro_fecha": "Fri, 14 Aug 2020 00:00:00 GMT",
+    "cro_ide": 3
+  }
+]
+~~~
+
 ### 3.3 Modificar Silabo
-=================
+
 Modifica la tabla silabo
 
 ~~~
@@ -357,14 +458,18 @@ Modifica la tabla de Unidad, Capitulo y tema
 Modifica la tabla cronograma
 
 ~~~
-POST  "\HOME"
+POST  "/silabo/cronogramaEva/modificar"
 ~~~
 
 ##### Requisito
 
 ~~~
 {
-	
+	"cro_eva": 2,
+	"cro_eva_con": 15,
+	"cro_exa_teo": 50,
+	"cro_fecha": "Fri, 14 Aug 2020 00:00:00 GMT",
+	"cro_ide": 2
 }
 ~~~
 
@@ -376,7 +481,7 @@ POST  "\HOME"
 }
 ~~~
 ### 3.4 Quitar Silabo
-=================
+
 QUita el silabo y todas sus subtablas
 
 ~~~
@@ -399,17 +504,29 @@ POST  "\HOME"
 }
 ~~~
 #### 3.4.1 Quitar Contenido
-QUita contenido(unidad,capitulo,silabo) del silabo
+Quita contenido(unidad,capitulo,silabo) del silabo
 
 ~~~
-POST  "\HOME"
+POST  "/silabo/contenido/quitar/unidad"
 ~~~
 
 ##### Requisito
 
 ~~~
 {
-	
+	uni_aca_ide: 1
+}
+~~~
+
+~~~
+{
+	cap_ide: 1
+}
+~~~
+
+~~~
+{
+	tem_ide: 1
 }
 ~~~
 
