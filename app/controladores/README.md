@@ -61,26 +61,25 @@ Modulo: SIlabos
 Agrega un nuevo registro a la tabla `Docente`, se envian todos los datos de la tabla excepto el `doc_ide`
 
 ~~~
-POST  "\HOME"
+POST  "/addDocente"
 ~~~
 
 
 #### Requisito
 ~~~
 {
-	doc_dni="77777777"
-	doc_nom="Ernesto"
-	doc_ape_pat="Cuadros"
-	doc_ape_mat="Vargas"
-	doc_grad_aca="Doctor"
-	dep_aca_ide="6"
+	"dni": 12345,
+	"name": "José",
+	"lastname1": "Ccari",
+	"lastname2": "Quispe",
+	"gradoacademico": "Estudent",
+	"depAcademico": 9
 }
-
 ~~~
 
 #### Respuesta
 ~~~
-
+Insert Succesful
 ~~~
 
 ### 1.3. Buscar de Docente
@@ -88,27 +87,24 @@ POST  "\HOME"
 Busca un docente de la tabla `Docentes` a partir de su `doc_DNI` y retorna todos los datos.
 
 ~~~
-POST  "\HOME"
+GET  "/searchDocente/1234"
 ~~~
 
 ### Requisito
-~~~
-{
-	dni=77777777
-}
-~~~
+
 
 ### Respuesta
 ~~~
-{
-	doc_ide=1
-	doc_dni=77777777
-	doc_nom="Ernesto"
-	doc_ape_pat="Cuadros"
-	doc_ape_mat="Vargas"
-	doc_grad_aca="Doctor"
-	dep_aca_ide="6"
-}
+[
+  {
+    "dep_aca_ide": 9,
+    "doc_ape_mat": "Cuadros",
+    "doc_ape_pat": "Vargas",
+    "doc_dni": 1234,
+    "doc_grad_aca": "Doctor ",
+    "doc_nom": "Ernesto"
+  }
+]
 ~~~
 
 ### 1.4 Modificar Docente
@@ -116,26 +112,26 @@ POST  "\HOME"
 Recibe todos los datos del registro y los modifica en la Base de Datos.
 
 ~~~
-POST  "\HOME"
+POST  "/updateDocente"
 ~~~
 
 #### Requisito
 
 ~~~
 {
-	doc_ide=1
-	doc_dni=77777777
-	doc_nombre="Ernesto"
-	doc_ape_pat="Cuadros"
-	doc_ape_mat="Vargas"
-	doc_grad_aca="Doctor"
-	dep_aca_ide="6"
+	"doc_ide" : 2 ,
+	"doc_dni" : 999999 ,
+	"doc_nom" : "José" ,
+	"doc_ape_pat" : "Carlos" ,
+	"doc_ape_mat" : "Ccari" ,
+	"doc_grad_aca" : "Master" ,
+	"dep_aca_ide" : 9
 }
 ~~~
 
 #### Respuesta
 ~~~
-
+Docente Actualizado
 ~~~
 
 ### 1.5 Quitar Docente
@@ -143,21 +139,19 @@ POST  "\HOME"
 ***Elimina*** un docente de la base de datos.
 
 ~~~
-POST  "\HOME"
+GET  "/deleteDocente/2"
 ~~~
 
 #### Requisito
 
 ~~~
-{
-	doc_dni=77777777
-}
+
 ~~~
 
 #### Respuesta
 
 ~~~
-
+Docente Eliminado
 ~~~
 
 
@@ -168,7 +162,7 @@ POST  "\HOME"
 Busca un curso por su `cur_cod` y retorna sus valores.
 
 ~~~
-POST  "\HOME"
+POST  "/searchCurs/CS1703236"
 ~~~
 
 #### Requisito
@@ -182,9 +176,19 @@ POST  "\HOME"
 #### Respuesta
 
 ~~~
-{
-	
-}
+
+  {
+    "cur_cod": "CS1703236",
+    "cur_credi": 3,
+    "cur_dur": 17,
+    "cur_fund": null,
+    "cur_hor_lab": 6,
+    "cur_hor_prac": 0,
+    "cur_hor_teo": 6,
+    "cur_nom": "Programación Competitiva",
+    "cur_sem": null
+  }
+
 ~~~
 
 
