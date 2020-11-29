@@ -217,77 +217,55 @@ class Model:
         self.cursor.execute(query)
         self.con.commit()
         return "Insert Succesful"
-    
-     #Agregar Docente
-    def addDocente(self):
+###### End Rodrigo ############ End Rodrigo ############ End Rodrigo ############  End Rodrigo ############ End Rodrigo ######
+
+###### Jhoel ############ Jhoel ############ Jhoel ############  Jhoel ############ Jhoel ######
+#Buscar Silabo
+    def BuscarSilabo(self, id):
+        self.cursor.execute("SELECT * from Silabo where sil_ide="+id)
+        rv=self.cursor.fetchall()
+
+        data = []
+        content = {}
+
+        for result in rv:
+            content={'sil_ide':result[0], 'sil_sem':result[1], 'sil_inst_eva':result[2],'sil_per_aca':result[3],'sil_fun':result[4],'sil_sum':result[5],'sil_req_apro':result[6]}
+            data.append(content)
+            content={}
+            return data
+
+    #Delete Silabo
+    def DeleteSilabo(self, id):
+        self.cursor.execute("DELETE from Silabo where sil_ide="+id)
+    def AsignarBibliografias(self):
         print(request.json)
-        query = f'INSERT INTO Docente (doc_dni , doc_nom , doc_ape_pat , doc_ape_mat , doc_grad_aca , dep_aca_ide ) VALUES ({request.json["dni"]},"{request.json["name"]}","{request.json["lastname1"]}","{request.json["lastname2"]}","{request.json["gradoacademico"]}",{request.json["depAcademico"]})'
-        print (query)
+        query = f'INSERT INTO Bibliografia(bib_nom, bib_edi, bib_editorial,bib_año) VALUES ("{request.json["bib_nom"]}","{request.json["bib_edi"]}","{request.json["bib_editorial"]}","{request.json["bib_año"]}");'
+        #print (query)
         self.cursor.execute(query)
         self.con.commit()
         return "Insert Succesful"
 
-    #Buscar Docente
-    def searchDocente(self, dni):
-        Docentes = []
-        query = "SELECT doc_dni , doc_nom , doc_ape_pat , doc_ape_mat , doc_grad_aca , dep_aca_ide FROM Docente WHERE doc_dni = %s AND doc_del_date is null "
-        self.cursor.execute(query, (dni,))
-        data = self.cursor.fetchall()
+    #Buscar Bibliografia
+    def BuscarBibliografia(self, id):
+        query="SELECT * from Bibliografia where bib_ide=%s"
+        self.cursor.execute(query,(id,))
+        data=self.cursor.fetchall()
 
-        for dnis in data:
-            s = {}
-            s["doc_dni"] = dnis[0]
-            s["doc_nom"] = dnis[1]
-            s["doc_ape_mat"] = dnis[2]
-            s["doc_ape_pat"] = dnis[3]
-            s["doc_grad_aca"] = dnis[4]
-            s["dep_aca_ide"] = dnis[5]
-            Docentes.append(s)
+        content = []
 
-        return jsonify(Docentes)
-
-    #Borrar Docente
-    def deleteDocente(self,id):
-        query = "UPDATE Docente SET doc_del_date=now() WHERE doc_ide= %s"
-        self.cursor.execute(query, (id,))
-        self.con.commit()
-        return "Docente Eliminado"
-
-    # Actualizar Docente
-    def updateDocente(self ):
-        newdata = request.json
-        t = newdata["doc_ide"]
+        for result in data:
+            s={}
+            s["bib_ide"]=result[0]
+            s["bib_nom"]=result[1]
+            s["bib_edi"]=result[2]
+            s["bib_editorial"]=result[3]
+            s["bib_año"]=result[4]
+            content.append(s)
         
-        query = "UPDATE Docente SET doc_dni = %s , doc_nom = %s, doc_ape_pat = %s, doc_ape_mat = %s, doc_grad_aca = %s, dep_aca_ide = %s WHERE doc_ide = %s" 
+        return jsonify(content)
 
-        print (query)
-    
-        self.cursor.execute(query,( newdata["doc_dni"],newdata["doc_nom"] ,newdata["doc_ape_pat"],newdata["doc_ape_mat"],newdata["doc_grad_aca"],newdata["dep_aca_ide"],newdata["doc_ide"]))
-        self.con.commit()
-        return "Docente Actualizado"
-        
-  
-    # Buscar Curso 
-    def searchCurs(self, cod):
-        Cursos = []
-        query = "SELECT cur_cod , cur_nom , cur_sem , cur_dur , cur_hor_teo , cur_hor_prac , cur_hor_lab , cur_credi , cur_fund FROM Curso WHERE cur_cod = %s "
-        
-        self.cursor.execute(query, (cod,))
-        data = self.cursor.fetchall()
+    #Delete Bibliografia
+    def DeleteBibliografia(self, id):
+        self.cursor.execute("DELETE from Bibliografia where bib_ide="+id)
 
-        for codi in data:
-            s = {}
-            s["cur_cod"] = codi[0]
-            s["cur_nom"] = codi[1]
-            s["cur_sem"] = codi[2]
-            s["cur_dur"] = codi[3]
-            s["cur_hor_teo"] = codi[4]
-            s["cur_hor_prac"] = codi[5]
-            s["cur_hor_lab"] = codi[6]
-            s["cur_credi"] = codi[7]
-            s["cur_fund"] = codi[8]
-            
-            Cursos.append(s)
-
-        return jsonify(Cursos)
-###### End Rodrigo ############ End Rodrigo ############ End Rodrigo ############  End Rodrigo ############ End Rodrigo ######
+###### End Jhoel ############ End Jhoel ############ End Jhoel ############  End Jhoel ############ End Jhoel ######

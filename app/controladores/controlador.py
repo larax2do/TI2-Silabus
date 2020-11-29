@@ -92,30 +92,33 @@ def modificarCapitulo():
 def modificarTema():
     return jsonify(model.modificarTema(request.json['tem_ide'],request.json['tem_nom'],request.json['tem_sem'],request.json['tem_porcen']))
 
+###### End Rodrigo ############ End Rodrigo ############ End Rodrigo ############  End Rodrigo ############ End Rodrigo #######
 
-#Agregar Docente
-@app.route('/addDocente', methods=['POST'])
-def Add_docentes ():
-    return model.addDocente()
-    
-#Buscar Docente
-@app.route('/searchDocente/<dni>', methods=['GET'])
-def Search_docentes (dni):
-    return model.searchDocente(dni)
+######  Jhoel ############  Jhoel ############  Jhoel ############   Jhoel ############ Jhoel ######
+#Buscar un silabo por ID
+@app.route('/BuscarSilabo/<id>',methods=['POST'])
+def BuscarSilabo(id):
+    return jsonify(model.BuscarSilabo(id))
 
-#Borrar Docente
-@app.route('/deleteDocente/<dni>', methods=['GET'])
-def DeleteDocentes (dni):
-    return model.deleteDocente(dni)
+#Delete por ID
+@app.route('/DeleteSilabo/<id>',methods=['DELETE'])
+def DeleteSilabo(id):
+    return jsonify(model.DeleteSilabo(id))
 
-# Actualizar Docente
-@app.route('/updateDocente', methods=['POST'])
-def UpdateDocentes ():
-    return model.updateDocente()
+#Agrega Bibliografia
+@app.route('/AsignarBibliografia/',methods=['POST'])
+def AsignarBibliografias():
+    return model.AsignarBibliografias()
 
-# Buscar Curso 
-@app.route('/searchCurs/<cod>', methods=['GET'])
-def SearchCurso (cod):
-    return model.searchCurs(cod)
+#Delete Bibliografia
+@app.route('/DeleteBibliografia/<id>',methods=['DELETE'])
+def DeleteBibliografia(id):
+    return jsonify(model.DeleteBibliografia(id))
 
-###### End Rodrigo ############ End Rodrigo ############ End Rodrigo ############  End Rodrigo ############ End Rodrigo ######
+#Buscar un silabo por ID
+@app.route('/BuscarBibliografia/<id>',methods=['GET'])
+def BuscarBibliografia(id):
+    return model.BuscarBibliografia(id)
+
+
+###### End Jhoel ############ End Jhoel ############ End Jhoel ############  End Jhoel ############ End Jhoel ######

@@ -218,14 +218,19 @@ POST  "\HOME"
 Agrega los datos a la tabla silabo
 
 ~~~
-POST  "\HOME"
+POST  "/silabo/silabo/agregar"
 ~~~
 
 ##### Requisito
 
 ~~~
 {
-	
+    "sil_ide": 5,
+    "sil_per": VI Semestre,
+    "sil_inf_espe": informacion esperada,
+    "sil_comp_asig": "asignado",
+    "sil_eva_apre": evaluacion de aprendizaje,
+    "sil_requ_apro": Estructura de Datos Avanzada,
 }
 ~~~
 
@@ -233,29 +238,70 @@ POST  "\HOME"
 
 ~~~
 {
-	
+	Insert Succesful
 }
 ~~~
 #### 3.1.2 Agregar Contenido
-Agrega a la tabla unidad, capitulo y tabla(3 serv rest)
 
+Agrega a la tabla unidad
 ~~~
-POST  "\HOME"
+POST  "/silabo/unidad_academica/agregar"
+~~~
+Agrega la tabla de capitulo
+~~~
+POST  "/silabo/capitulo/agregar"
+~~~
+Agrega la tabla de tema
+~~~
+POST  "/silabo/tema/agregar"
 ~~~
 
 ##### Requisito
 
 ~~~
+Tabla de unidad academica
+~~~
 {
-	
+	"sil_ide": 2,
+	"sil_per": IV Semestre,
+	"sil_inf_espe": Informacion esperada de datos,
+	"sil_comp_asig": asignado,
+	"sil_eva_apre": evaluacion del aprendizaje de profesores,
+	"sil_req_apro": Estructura de Datos Avanzada
 }
 ~~~
+Tabla de capitulo 
+~~~
+{
+	"cap_ide": 2,
+	"cap_nom": Capitulo 1
+}
+~~~
+Tabla de Tema
+~~~
+{
+	"tem_ide": 2,
+	"tem_sem": IV Semestre,
+	"tem_porcen": 80 por ciento
+}
+~~~
+
 
 ##### Respuesta
 
 ~~~
 {
-	
+	Insert Succesful
+}
+~~~
+~~~
+{
+	Insert Succesful
+}
+~~~
+~~~
+{
+	Insert Succesful
 }
 ~~~
 #### 3.1.3 Agregar Cronograma
@@ -434,29 +480,104 @@ POST  "/silabo/cronogramaEva/buscar"
 Modifica la tabla silabo
 
 ~~~
-POST  "\HOME"
+POST  "/silabo/silabo/modificar"
 ~~~
 
 #### Requisito
 
 ~~~
 {
-	
+    "sil_ide": 5,
+    "sil_per": VI Semestre,
+    "sil_inf_espe": informacion esperada,
+    "sil_comp_asig": "asignado",
+    "sil_eva_apre": evaluacion de aprendizaje,
+    "sil_requ_apro": Estructura de Datos Avanzada,
 }
 ~~~
 
 #### Respuesta
-
 ~~~
 {
-	
+    "sil_ide": 5,
+    "sil_per": VI Semestre,
+    "sil_inf_espe": informacion esperada,
+    "sil_comp_asig": "asignado",
+    "sil_eva_apre": evaluacion de aprendizaje,
+    "sil_requ_apro": Estructura de Datos Avanzada,
 }
 ~~~
 
 #### 3.3.1 Modificar Contenido
-Modifica la tabla de Unidad, Capitulo y tema
+Modifica la tabla de Unidad
+~~~
+POST  "/silabo/unidad_academica/modificar"
+~~~
+Modifica la tabla de capitulo
+~~~
+POST  "/silabo/capitulo/modificar"
+~~~
+Modifica la tabla de tema
+~~~
+POST  "/silabo/tema/modificar"
+~~~
 
+##### Requisito
+Tabla de unidad academica
+~~~
+{
+	"sil_ide": 2,
+	"sil_per": IV Semestre,
+	"sil_inf_espe": Informacion esperada de datos,
+	"sil_comp_asig": asignado,
+	"sil_eva_apre": evaluacion del aprendizaje de profesores,
+	"sil_req_apro": Estructura de Datos Avanzada
+}
+~~~
+Tabla de capitulo 
+~~~
+{
+	"cap_ide": 2,
+	"cap_nom": Capitulo 1
+}
+~~~
+Tabla de Tema
+~~~
+{
+	"tem_ide": 2,
+	"tem_sem": IV Semestre,
+	"tem_porcen": 80 por ciento
+}
+~~~
+##### Respuesta
 
+Contenido Modificado/Actualizado
+Tabla de unidad academica
+~~~
+{
+	"sil_ide": 2,
+	"sil_per": IV Semestre,
+	"sil_inf_espe": Informacion esperada de datos,
+	"sil_comp_asig": asignado,
+	"sil_eva_apre": evaluacion del aprendizaje de profesores,
+	"sil_req_apro": Estructura de Datos Avanzada
+}
+~~~
+Tabla de capitulo 
+~~~
+{
+	"cap_ide": 2,
+	"cap_nom": Capitulo 1
+}
+~~~
+Tabla de Tema
+~~~
+{
+	"tem_ide": 2,
+	"tem_sem": IV Semestre,
+	"tem_porcen": 80 por ciento
+}
+~~~
 
 #### 3.3.2 Modificar Cronograma
 Modifica la tabla cronograma
