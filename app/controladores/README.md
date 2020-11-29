@@ -132,24 +132,27 @@ Docente Actualizado
 ~~~
 
 ### 1.5 Quitar Docente
-
+=================
 ***Elimina*** un docente de la base de datos.
 
 ~~~
-GET  "/deleteDocente/2"
+POST  "\HOME"
 ~~~
 
 #### Requisito
 
 ~~~
-
+{
+	doc_dni=77777777
+}
 ~~~
 
 #### Respuesta
 
 ~~~
-Docente Eliminado
+
 ~~~
+
 
 
 ## 2. Curso
@@ -195,25 +198,7 @@ POST  "/searchCurs/CS1703236"
 
 Crea un campo en silabo en blanco para reservar su `sil_ide` y para que sea relacionada con las otras tablas.
 
-~~~
-POST  "\HOME"
-~~~
 
-#### Requisito
-
-~~~
-{
-	
-}
-~~~
-
-#### Respuesta
-
-~~~
-{
-	
-}
-~~~
 #### 3.1.1 Agregar Silabo
 Agrega los datos a la tabla silabo
 
@@ -333,45 +318,45 @@ POST  "/silabo/cronogramaEva/agregar"
 Asigna una bibliografia al silabo
 
 ~~~
-POST  "\HOME"
+POST
 ~~~
 
 #### Requisito
 
 ~~~
 {
-	
+    "bib_nom"
+    "bib_edi"
+    "bib_editorial"
+    "bib_año"
 }
 ~~~
 
 #### Respuesta
+Insert Succesful
 
-~~~
-{
-	
-}
-~~~
 ### 3.2 Buscar Silabo
-
+=================
 Busca el silabo por `sil_ide` y retorna todos los campos de la tabla silabo y subtablas
 
 ~~~
-POST  "\HOME"
+POST
 ~~~
 
 #### Requisito
-
-~~~
-{
-	
-}
-~~~
+sil_ide
 
 #### Respuesta
 
 ~~~
 {
-	
+    "sil_fun"
+    "sil_ide"
+    "sil_inst_eva"
+    "sil_per_aca"
+    "sil_req_apro"
+    "sil_sem"
+    "sil_sum"
 }
 ~~~
 
@@ -606,27 +591,20 @@ POST  "/silabo/cronogramaEva/modificar"
 }
 ~~~
 ### 3.4 Quitar Silabo
-
+=================
 QUita el silabo y todas sus subtablas
 
 ~~~
-POST  "\HOME"
+DEL  "\HOME"
 ~~~
 
 #### Requisito
-
-~~~
-{
-	
-}
-~~~
+ID
 
 #### Respuesta
 
 ~~~
-{
-	
-}
+null
 ~~~
 #### 3.4.1 Quitar Contenido
 Quita contenido(unidad,capitulo,silabo) del silabo
@@ -666,23 +644,17 @@ POST  "/silabo/contenido/quitar/unidad"
 QUita la bibliografia asignada al silabo
 
 ~~~
-POST  "\HOME"
+DEL
 ~~~
 
 ##### Requisito
-
-~~~
-{
-	
-}
-~~~
+ID
 
 ##### Respuesta
 
 ~~~
-{
-	
-}
+null
 ~~~
+
 
 
