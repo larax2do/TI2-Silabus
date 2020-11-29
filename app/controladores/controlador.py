@@ -122,3 +122,35 @@ def BuscarBibliografia(id):
 
 
 ###### End Jhoel ############ End Jhoel ############ End Jhoel ############  End Jhoel ############ End Jhoel ######
+
+
+###### End José ############ End José ############ End José ############  End José ############ End José ######
+
+
+#Agregar Docente
+@app.route('/addDocente', methods=['POST'])
+def Add_docentes ():
+    return model.addDocente()
+    
+#Buscar Docente
+@app.route('/searchDocente/<dni>', methods=['GET'])
+def Search_docentes (dni):
+    return model.searchDocente(dni)
+
+#Borrar Docente
+@app.route('/deleteDocente/<dni>', methods=['GET'])
+def DeleteDocentes (dni):
+    return model.deleteDocente(dni)
+
+# Actualizar Docente
+@app.route('/updateDocente', methods=['POST'])
+def UpdateDocentes ():
+    return model.updateDocente()
+
+# Buscar Curso 
+@app.route('/searchCurs/<cod>', methods=['GET'])
+def SearchCurso (cod):
+    return model.searchCurs(cod)
+
+###### End José ############ End José ############ End José ############  End José ############ End José ######
+
