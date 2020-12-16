@@ -243,7 +243,7 @@ POST  "/silabo/tema/agregar"
 
 ##### Requisito
 
-~~~
+
 Tabla de unidad academica
 ~~~
 {
